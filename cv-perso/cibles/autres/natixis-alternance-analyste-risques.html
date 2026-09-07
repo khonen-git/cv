@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Alternance – 1 an – Analyste des Risques F/H — Natixis</title>
+  <link rel="stylesheet" href="../../../cv/base.css">
+  <link rel="stylesheet" href="../../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../../shared/layout-narrow-sidebar.css">
+  <style>
+    :root { --sidebar-w: 64mm; }
+  </style>
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Alternance – 1 an – Analyste des Risques F/H</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Paris · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Disponible septembre 2026</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Analyse quantitative &amp; risques</dt>
+            <dd>séries temporelles · analyse statistique · volatilité · liquidité · données de taux et de marché · tests d’hypothèses · indicateurs quantitatifs · validation hors échantillon</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programmation &amp; analyse de données</dt>
+            <dd>Python · SQL · Excel · NumPy · pandas · Polars · SciPy · scikit-learn · statsmodels · PostgreSQL · Power BI · Git</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Machine Learning &amp; modélisation</dt>
+            <dd>classification · régression · clustering · feature engineering · XGBoost · HMM · GARCH · réduction de dimension</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Ingénierie de données &amp; qualité</dt>
+            <dd>Dagster · MLflow · pytest · Docker · Linux · FastAPI · Joblib · profiling</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP niveau 7<br>
+          <span class="edu-detail">
+            Alternance prévue à partir de septembre 2026 · Durée prévue : 18 mois<br>
+            Rythme : 4 jours entreprise / 1 jour formation · Contrat : apprentissage ou professionnalisation
+          </span>
+        </p>
+        <p class="compact">
+          <strong>Diplôme Data Analyst</strong><br>
+          OpenClassrooms — RNCP niveau 6<br>
+          <span class="edu-detail">Juil. 2024 – Sept. 2025</span><br>
+          <span class="edu-detail">Python · SQL · Excel · machine learning · statistiques · visualisation · Power BI</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact">
+          <strong>Optiver Market Making Competition</strong> — participant, 2022.
+        </p>
+        <p class="compact">
+          <strong>Langues :</strong><br>
+          Français (natif)<br>
+          Anglais (professionnel)
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Diplômé en Data Analytics, spécialisé en analyse quantitative, données financières
+          et séries temporelles. J’ai conçu des pipelines de recherche Python de bout en bout
+          pour traiter plusieurs dizaines de millions d’observations de marché, construire et
+          analyser des indicateurs quantitatifs, étudier les variations de variables financières,
+          et valider de manière robuste hors échantillon des modèles statistiques et de machine
+          learning. Mes projets couvrent également la modélisation de volatilité, le pricing
+          d’options et des pipelines de données automatisés. Je recherche une alternance en
+          analyse des risques financiers à partir de septembre 2026, dans le cadre du parcours
+          OpenClassrooms Data Scientist — Machine Learning.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Laboratoire de Machine Learning financier</h3>
+            <span class="project-tag">Analyse quantitative · données financières · séries temporelles</span>
+          </div>
+          <p class="project-oneline">
+            Plateforme Python indépendante de recherche et d’expérimentation sur plusieurs
+            dizaines de millions d’observations tick FX intraday, initialement inspirée de
+            <em>Advances in Financial Machine Learning</em> (Marcos López de Prado).
+          </p>
+          <ul>
+            <li>
+              Construit des pipelines reproductibles d’ingestion, de contrôle qualité, de
+              transformation et d’analyse de données tick FX multi-paires à grande échelle.
+            </li>
+            <li>
+              Développé des workflows de feature engineering portant sur la volatilité, les
+              régimes de marché, la structure des prix et les information-driven bars.
+            </li>
+            <li>
+              Formulé et évalué des problèmes prédictifs sur données financières à l’aide de
+              modèles statistiques et de machine learning, notamment modèles linéaires,
+              ensembles d’arbres, XGBoost et HMM.
+            </li>
+            <li>
+              Comparé les modèles à des baselines et évalué leur généralisation hors échantillon
+              avec walk-forward, purging, embargo et combinatorial purged cross-validation.
+            </li>
+            <li>
+              Implémenté des modèles de volatilité et des analyses de séries temporelles, dont
+              GARCH, ainsi que des workflows d’échantillonnage et de labellisation adaptés aux
+              données financières.
+            </li>
+            <li>
+              Orchestré les pipelines de données, features, labels et modèles avec Dagster et
+              suivi les expériences, paramètres, métriques et artefacts avec MLflow.
+            </li>
+            <li>
+              Développé des tests unitaires, d’intégration, de performance et end-to-end ; le
+              framework public comporte environ 950 tests automatisés.
+            </li>
+            <li>
+              Analysé la stabilité, les distributions et le comportement temporel des features
+              financières et des sorties de modèles dans des conditions de marché changeantes.
+            </li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Modélisation de volatilité d’options</h3>
+            <span class="project-tag">Pricing · données financières · calibration</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline Python reproductible sur données d’options cotées : nettoyage et contrôle
+            des données de marché, pricing Black–Scholes et Greeks, estimation numérique de
+            volatilité implicite, puis calibration et comparaison de surfaces SVI/SSVI et du
+            modèle de Heston.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Pipeline live de données et d’inférence</h3>
+            <span class="project-tag">Temps réel · automatisation</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline de démonstration : ticks temps réel, features Python, chargement de modèles
+            (Joblib) et inférence MetaTrader 5, avec logs, validations runtime et garde-fous.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../../cv/paginate-screen.js"></script>
+</body>
+</html>

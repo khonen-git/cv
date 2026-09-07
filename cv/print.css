@@ -1,0 +1,91 @@
+@page {
+  size: A4 portrait;
+  margin: 0;
+}
+
+@media print {
+  .preview-nav,
+  .cv-screen-preview {
+    display: none !important;
+  }
+
+  .cv-print-source {
+    position: static !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  html {
+    /* Match screen typography to avoid layout drift (wraps/heights differ in PDF) */
+    font-size: var(--size);
+  }
+
+  body {
+    padding: 0;
+    background: #fff;
+    display: block;
+  }
+
+  .cv-page {
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    box-shadow: none;
+    padding: 12mm 14mm;
+    overflow: visible;
+  }
+
+  .cv-page.cv--two-col {
+    display: flex;
+    align-items: stretch;
+    min-height: var(--page-h);
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv--two-col .cv-sidebar {
+    width: var(--sidebar-w, 68mm);
+    flex: 0 0 var(--sidebar-w, 68mm);
+    align-self: stretch;
+    min-height: 100%;
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--rule);
+    /* Align with layout-two-col.css paddings for consistent wraps in PDF */
+    padding: var(--page-pad-y) 5mm var(--page-pad-y) var(--page-pad-x);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .cv--two-col .cv-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: var(--page-pad-y) var(--page-pad-x) var(--page-pad-y) 5mm;
+  }
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .cv-sidebar .cv-links a[href^="http"]::after,
+  .cv-sidebar .cv-links a[href^="mailto"]::after {
+    content: none;
+  }
+
+  /* Let sections break naturally if needed (avoid large "holes") */
+  section {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  .project {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  h2 {
+    break-after: avoid;
+  }
+}

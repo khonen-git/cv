@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Data Scientist — Machine Learning &amp; Data Engineering</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-narrow-sidebar.css">
+  <style>
+    :root { --sidebar-w: 60mm; }
+
+    .cv-subtitle {
+      margin: -0.15rem 0 0.35rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.3;
+    }
+
+    /* Taxonomie dense : fiche technique sur 2 pages */
+    #skills .skills-stack .skill-row {
+      margin-bottom: 0.32rem;
+    }
+
+    #skills .skills-stack dt {
+      font-size: 0.68rem;
+      margin-bottom: 0.04rem;
+    }
+
+    #skills .skills-stack dd {
+      font-size: 0.72rem;
+      line-height: 1.28;
+    }
+
+    #skills .skill-lines {
+      display: block;
+    }
+
+    #skills .skill-lines span {
+      display: block;
+    }
+
+    .cv-sidebar #education,
+    .cv-sidebar #other {
+      margin-top: 0.15rem;
+    }
+
+    .cv-sidebar #education .compact,
+    .cv-sidebar #other .compact {
+      margin-bottom: 0.28rem;
+    }
+
+    .research {
+      margin-bottom: 0.5rem;
+    }
+
+    .research:last-child {
+      margin-bottom: 0;
+    }
+
+    .research-finding {
+      margin: 0.15rem 0 0;
+      font-size: 0.94rem;
+      color: var(--text);
+    }
+
+    .research-finding strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .project-compact {
+      margin-bottom: 0.4rem;
+    }
+
+    .project-compact:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Data Scientist — Machine Learning &amp; Data Engineering</p>
+        <p class="cv-subtitle">Time Series · Applied ML · Research Engineering</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">France · International · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Disponible immédiatement</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Machine Learning</dt>
+            <dd>classification · régression · Random Forest · Gradient Boosting · XGBoost · SVM · modèles linéaires · clustering</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Feature Engineering, Selection &amp; Dimensionality Reduction</dt>
+            <dd>feature engineering · feature selection · Mutual Information · permutation / Gini importance · L1 / RFE · PCA · LDA · SVD</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Model Evaluation &amp; Validation</dt>
+            <dd>ROC-AUC · PR-AUC · Log Loss · Brier Score · probability calibration · ECE · precision · recall · F1 · OOS · cross-validation · walk-forward · purging / embargo · CPCV · hyperparameter tuning · Grid / Random Search · ablation studies · baseline comparison</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Statistics &amp; Probability</dt>
+            <dd>statistical inference · hypothesis testing · confidence intervals · effect sizes · parametric / non-parametric tests · bootstrap · permutation tests · null models · multiple-testing correction / FDR · correlation / covariance · entropy · dependence measures</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Time Series &amp; Stochastic Modelling</dt>
+            <dd>stationarity · ACF / autocorrelation · AR / MA / ARIMA · volatility modelling · GARCH · stochastic processes · HMM / HSMM / regime modelling · fractional differencing</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Survival / Event-Time Analysis</dt>
+            <dd>survival analysis · hazard functions · competing risks · censoring · first-passage / event-time analysis</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Simulation &amp; Monte Carlo</dt>
+            <dd>Monte Carlo simulation · stochastic-process simulation · path simulation · empirical bootstrap · block bootstrap · Markov-chain / state-transition simulation · scenario analysis · uncertainty propagation</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Mathematics &amp; Optimization</dt>
+            <dd>linear algebra · calculus · gradients / Hessians · convexity · numerical optimization · gradient descent · information theory</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programming &amp; Data</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · statsmodels · PostgreSQL</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Software Engineering</dt>
+            <dd>OOP · modular architecture · design patterns · type hints · schema validation · data contracts · unit / integration / performance / E2E tests · logging · error handling · profiling · Git · AI-assisted development (Cursor)</dd>
+          </div>
+          <div class="skill-row">
+            <dt>ML / Data Engineering</dt>
+            <dd class="skill-lines">
+              <span>Dagster — data / ML pipeline orchestration</span>
+              <span>MLflow — experiment tracking</span>
+              <span>Hydra · YAML — composable experiment configuration</span>
+              <span>Docker · FastAPI · Joblib · data / ML pipelines · CPU / GPU profiling · CUDA / RAPIDS</span>
+            </dd>
+          </div>
+          <div class="skill-row">
+            <dt>Systems &amp; Deployment</dt>
+            <dd>Linux · Bash · CLI · SSH · VPS / remote environments · deployment · environment management</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Visualization, BI &amp; Web Apps</dt>
+            <dd>Matplotlib · Plotly · Streamlit · Power BI · HTML · CSS · JavaScript · custom interactive dashboards</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP niveau 7<br>
+          <span class="edu-detail">Parcours visé · Alternance 18 mois · dès maintenant</span>
+        </p>
+        <p class="compact">
+          <strong>Diplôme Data Analyst</strong><br>
+          OpenClassrooms — RNCP niveau 6<br>
+          <span class="edu-detail">Juil. 2024 – Sept. 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact"><strong>Langues :</strong> Français (natif) · Anglais (professionnel).</p>
+        <p class="compact"><strong>Optiver Market Making Competition</strong> — participant, 2022.</p>
+        <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Diplômé en Data Analytics, je développe depuis plusieurs années des projets personnels en
+          machine learning, séries temporelles et ingénierie logicielle. Mon principal projet est un
+          laboratoire Python de recherche construit de bout en bout : traitement de dizaines de millions
+          d’observations, expérimentation statistique et ML, validation hors échantillon, pipelines
+          reproductibles, tests automatisés, visualisation et déploiement. Je recherche 
+          une opportunité en emploi ou en alternance où je pourrai mettre à profit cette combinaison de 
+          machine learning, expérimentation et engineering sur des problématiques de Data Science, Machine Learning ou MLOps.
+        </p>
+      </section>
+
+      <section id="platform">
+        <h2>Projet principal — Research Engineering</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Financial Time-Series ML Research Laboratory</h3>
+            <span class="project-tag">Pipelines end-to-end · expérimentation · reproductibilité</span>
+          </div>
+          <p class="project-oneline">
+            Laboratoire de recherche codé principalement en Python modulaire dédié à l'expérimentation sur 
+            des données de marchés financiers high-frequency. Conçue pour industralier 
+            des pipelines allant de l'ingérence des données bruts aux modèles évalués prêt pour le deploiement.
+          </p>
+          <ul>
+            <li>Construit des pipelines d’ingestion, validation et transformation sur plusieurs dizaines de millions d’observations (ticks), jusqu’à des datasets prêts pour la modélisation.</li>
+            <li>Met en place des workflows configurables d’échantillonnage d’événements, de construction de bars, de features et de labels multi-horizons.</li>
+            <li>Conçoit une architecture modulaire features / labels / models pilotée par configurations YAML composables avec Hydra, pour faire varier datasets, paramètres, modèles et protocoles expérimentaux sans modifier la logique applicative.</li>
+            <li>Orchestre les pipelines avec Dagster ; suit paramètres, métriques et artefacts avec MLflow ; persiste les données et résultats structurés dans PostgreSQL ; versionne code et configurations avec Git.</li>
+            <li>Couvre le framework public avec ~950 tests automatisés (unitaires, intégration, performance, end-to-end) pour fiabiliser traitement, features, validation et modélisation.</li>
+            <li>Compare exécutions CPU et GPU (CUDA, cuML, XGBoost GPU) avec profiling pour arbitrer gains de performance, coûts mémoire et stabilité.</li>
+            <li>Expose des briques d’exploration et d’inférence (Streamlit / Plotly, FastAPI, Joblib) et un pipeline live de démonstration : ingestion → features → modèles → inférence, avec logs et contrôles runtime.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="research">
+        <h2>Selected ML &amp; Statistical Research</h2>
+        <p class="project-oneline" style="margin-bottom: 0.45rem;">
+          Démarche cohérente : états latents → dynamique des transitions → prédictibilité →
+          falsification d’artefacts → validité conditionnelle des événements.
+        </p>
+
+        <article class="research project">
+          <div class="project-head">
+            <h3>01 — Latent regime dynamics &amp; competing risks</h3>
+            <span class="project-tag">HMM · filtrage causal · hazards</span>
+          </div>
+          <p class="project-oneline">
+            <strong>Question :</strong> comment évoluent les transitions entre régimes courts lorsqu’un
+            régime long reste actif ?
+          </p>
+          <ul>
+            <li>HMM multi-horizons (court vs long), freeze après calibration, puis filtrage causal OOS.</li>
+            <li>Sojourn times vs durée géométrique implicite ; transitions +1 → 0 → −1 ; soft-fade et sorties resolve / escalate / break.</li>
+            <li>Competing risks et cause-specific hazards selon l’âge dans l’état.</li>
+          </ul>
+          <p class="research-finding">
+            <strong>Finding :</strong> sorties soft-fade asymétriques et stables IS/OOS
+            (~28&nbsp;% resolve · ~68&nbsp;% escalate · ~4&nbsp;% break) ; hazards non constants —
+            escalation concentrée en début d’épisode, résolutions davantage vers ~9–12 bars.
+          </p>
+        </article>
+
+        <article class="research project">
+          <div class="project-head">
+            <h3>02 — Predictability of market regimes</h3>
+            <span class="project-tag">Random Forest · XGBoost · évaluation conditionnelle</span>
+          </div>
+          <p class="project-oneline">
+            <strong>Question :</strong> dans quelle mesure des régimes / labels latents sont-ils
+            réellement prédictibles hors échantillon à partir du contexte ?
+          </p>
+          <ul>
+            <li>Classification supervisée (RF / XGBoost) vs baselines, validation temporelle purged / walk-forward.</li>
+            <li>Diagnostics : AUC, calibration, stabilité temporelle, ablations et sensibilités d’horizon.</li>
+            <li>Évaluation conditionnelle : performance globale vs performance restreinte à certains event samples.</li>
+          </ul>
+          <p class="research-finding">
+            <strong>Finding :</strong> prédictibilité globale mesurable (AUC typiquement ~0.7–0.8 selon
+            configurations), mais forte dégradation — parfois proche du hasard — lorsque l’évaluation
+            est conditionnée à certains sous-ensembles d’événements.
+          </p>
+        </article>
+
+        <article class="research project">
+          <div class="project-head">
+            <h3>03 — Signal filtering, persistence &amp; null models</h3>
+            <span class="project-tag">Filtres roulants · permutation · falsification</span>
+          </div>
+          <p class="project-oneline">
+            <strong>Question :</strong> la persistance observée sur des signaux filtrés est-elle une
+            propriété du marché ou un artefact du preprocessing ?
+          </p>
+          <ul>
+            <li>Étude de z-scores / signaux roulants et de représentations multi-échelles.</li>
+            <li>Null models par permutation / bootstrap pour reproduire la persistance apparente sous l’hypothèse nulle.</li>
+            <li>Isolation de la contribution mécanique des fenêtres roulantes vs structure informative.</li>
+          </ul>
+          <p class="research-finding">
+            <strong>Finding :</strong> une part importante de la persistance apparente peut être
+            reproduite mécaniquement par la transformation roulante, y compris sur données sans structure —
+            conclusion négative méthodologiquement plus utile qu’un score isolé.
+          </p>
+        </article>
+
+        <article class="research project">
+          <div class="project-head">
+            <h3>04 — Event validity &amp; conditional effects</h3>
+            <span class="project-tag">Event sampling · matched nulls · first-passage</span>
+          </div>
+          <p class="project-oneline">
+            <strong>Question :</strong> un événement apparemment significatif apporte-t-il réellement
+            de l’information au-delà de son contexte pré-événement ?
+          </p>
+          <ul>
+            <li>Événements (ex. accélération de volatilité, crossings) analysés via conditioning, matched nulls, bootstrap / permutation et ablations.</li>
+            <li>Chemins concurrents de first-passage / survie (atteindre un objectif avant retour à la moyenne ; conditioning sur la survie après plusieurs bars).</li>
+          </ul>
+          <p class="research-finding">
+            <strong>Finding :</strong> plusieurs effets initialement marqués se réduisent nettement après
+            contrôle des variables pré-event — nécessité de séparer <em>event effect</em> et
+            <em>context effect</em>.
+          </p>
+        </article>
+      </section>
+
+      <section id="other-projects">
+        <h2>Autres projets techniques</h2>
+
+        <article class="project project-compact">
+          <div class="project-head">
+            <h3>Modélisation de volatilité implicite</h3>
+            <span class="project-tag">Options · calibration</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline Python : nettoyage de données de marché → Black–Scholes / Greeks → inversion
+            numérique d’IV → surfaces SVI/SSVI → calibration Heston, dans une logique de comparaison de modèles.
+          </p>
+        </article>
+
+        <article class="project project-compact">
+          <div class="project-head">
+            <h3>Pipeline live d’inférence ML</h3>
+            <span class="project-tag">Déploiement · temps réel</span>
+          </div>
+          <p class="project-oneline">
+            Chaîne de démonstration ingestion → features → chargement de modèles (Joblib) → inférence →
+            exécution, avec logs structurés, validations runtime et garde-fous opérationnels (FastAPI, Docker).
+          </p>
+        </article>
+
+        <article class="project project-compact">
+          <div class="project-head">
+            <h3>Data Analytics / BI</h3>
+            <span class="project-tag">EDA · SQL · dashboards</span>
+          </div>
+          <p class="project-oneline">
+            Projets complémentaires (OpenClassrooms et livrables perso) : EDA, SQL, étude de marché /
+            segmentation, dashboards Power BI et restitution métier — portfolio :
+            <a href="https://khonen.com">khonen.com</a>.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../cv/paginate-screen.js"></script>
+</body>
+</html>

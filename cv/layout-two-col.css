@@ -1,0 +1,83 @@
+/* A4 — two columns (sidebar + main) */
+body {
+  padding: 2.75rem 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv-page {
+  width: var(--page-w);
+  height: var(--page-h);
+  min-height: var(--page-h);
+  display: grid;
+  grid-template-columns: 68mm 1fr;
+  position: relative;
+  background: linear-gradient(to right, var(--sidebar-bg) 68mm, #fff 68mm);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cv-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 68mm;
+  border-right: 1px solid var(--rule);
+  pointer-events: none;
+}
+
+.cv-sidebar {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: var(--page-pad-y) 5mm var(--page-pad-y) var(--page-pad-x);
+}
+
+.cv-main {
+  padding: var(--page-pad-y) var(--page-pad-x) var(--page-pad-y) 5mm;
+  min-width: 0;
+}
+
+.cv-sidebar .cv-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0.75rem;
+}
+
+.cv-sidebar .cv-header h1 {
+  font-size: 1.35rem;
+}
+
+.cv-sidebar .cv-title {
+  font-size: 0.98rem;
+}
+
+.cv-sidebar .cv-meta {
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cv-sidebar .cv-meta .sep:not(.cv-meta-item)::before {
+  content: none;
+}
+
+.cv-sidebar .cv-links a {
+  font-size: 0.9rem;
+}
+
+.cv-sidebar section {
+  margin-bottom: 0.65rem;
+}
+
+.cv-sidebar h2 {
+  font-size: 0.75rem;
+}
+
+.cv-main .cv-header {
+  display: none;
+}
+
+.cv-main section:first-child h2 {
+  margin-top: 0;
+}

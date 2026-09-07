@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Alternance — Actuaire Data Scientist — AXA</title>
+  <link rel="stylesheet" href="../../../cv/base.css">
+  <link rel="stylesheet" href="../../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../../shared/layout-narrow-sidebar.css">
+  <style>
+    :root { --sidebar-w: 66mm; }
+  </style>
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Alternance — Actuaire Data Scientist</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Nanterre · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Disponible immédiatement</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Analyse quantitative &amp; modélisation</dt>
+            <dd>modèles statistiques · scoring · classification · régression · séries temporelles · HMM · GARCH · validation hors échantillon · backtesting</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programmation &amp; données</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · scikit-learn · statsmodels · PostgreSQL · Git</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Contrôle &amp; robustesse</dt>
+            <dd>contrôles qualité des données · coût des erreurs · faux positifs/faux négatifs · walk-forward · purging · embargo · CPCV</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Industrialisation</dt>
+            <dd>Dagster · MLflow · pytest · Docker · Joblib · pipelines de données · expérimentation reproductible</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP niveau 7<br>
+          <span class="edu-detail">Parcours visé · Alternance prévue sur 18 mois · dès maintenant</span>
+        </p>
+        <p class="compact">
+          <strong>Diplôme Data Analyst</strong><br>
+          OpenClassrooms — RNCP niveau 6<br>
+          <span class="edu-detail">Juil. 2024 – Sept. 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact"><strong>Langues :</strong> Français (natif) · Anglais (professionnel).</p>
+        <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Diplômé en Data Analytics et futur étudiant du parcours Data Scientist — Machine Learning, je travaille sur des sujets de modélisation statistique, validation robuste et analyse des risques d'erreur. J'accorde une importance particulière à la qualité des données, à l'interprétation des résultats et au choix de seuils adaptés aux contraintes métier.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Détection de faux billets par classification supervisée</h3>
+            <span class="project-tag">Classification · seuil de décision · analyse d'erreurs</span>
+          </div>
+          <p class="project-oneline">
+            Projet de classification supervisée comparant plusieurs familles de modèles pour détecter des billets non authentiques,
+            avec attention particulière au coût métier des faux positifs et faux négatifs.
+          </p>
+          <ul>
+            <li>Traite des valeurs manquantes via régression linéaire multiple après vérification des hypothèses statistiques.</li>
+            <li>Compare régression logistique, KNN, Random Forest, XGBoost et QDA à partir des performances et des probabilités prédites.</li>
+            <li>Ajuste le seuil de décision et exporte le modèle avec Joblib pour un usage reproductible.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Laboratoire de recherche ML sur séries temporelles</h3>
+            <span class="project-tag">Validation temporelle · robustesse · signaux</span>
+          </div>
+          <p class="project-oneline">
+            Plateforme Python de recherche construite pour formuler des problèmes prédictifs sur données de marché,
+            fabriquer des événements, des labels et des features, puis évaluer les modèles sans fuite d'information.
+          </p>
+          <ul>
+            <li>Conçoit des workflows d'event-based sampling, de label engineering et de features autour de la volatilité, des régimes et de la structure des prix.</li>
+            <li>Compare des baselines statistiques, XGBoost, HMM de régimes et modèles de volatilité de type GARCH sur des données intraday volumineuses.</li>
+            <li>Contrôle la robustesse via walk-forward, purging, embargo, combinatorial purged cross-validation et workflows de backtesting.</li>
+            <li>Orchestre les expériences avec Dagster et MLflow dans une logique systématique d'analyse hors échantillon.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Modélisation de volatilité d'options</h3>
+            <span class="project-tag">Calibration · optimisation numérique · volatilité</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline Python sur données d'options cotées couvrant nettoyage de données de marché, pricing Black-Scholes,
+            inversion de volatilité implicite et calibration de surfaces de volatilité.
+          </p>
+          <ul>
+            <li>Calcule prix et sensibilités puis estime la volatilité implicite à partir de données de marché.</li>
+            <li>Met en œuvre des calibrations SVI/SSVI et Heston dans une logique de comparaison de modèles et d'ajustement numérique.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../../cv/paginate-screen.js"></script>
+</body>
+</html>

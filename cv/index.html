@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Single column (A4)</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout-single.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+  <nav class="preview-nav" aria-label="Layout variants">
+    <a href="index.html" aria-current="page">Single column</a>
+    <a href="index-two-col.html">Two columns</a>
+  </nav>
+
+  <main class="cv-page">
+    <header class="cv-header">
+      <!-- TODO: replace placeholders -->
+      <h1>Your Full Name</h1>
+      <p class="cv-title">Quant Researcher · ML &amp; Data Science</p>
+      <div class="cv-meta">
+        <span>France</span>
+        <span class="sep">Open to international roles · Remote / relocation</span>
+        <span class="sep">Available immediately</span>
+        <span class="sep">Internship · Full-time</span>
+      </div>
+      <ul class="cv-links">
+        <li><a href="mailto:you@email.com">you@email.com</a></li>
+        <li><a href="https://github.com/YOUR_USER">github.com/YOUR_USER</a></li>
+        <li><a href="https://linkedin.com/in/YOUR_PROFILE">linkedin.com/in/YOUR_PROFILE</a></li>
+        <li><a href="https://your-website.com">your-website.com</a></li>
+      </ul>
+    </header>
+
+    <section id="summary">
+      <h2>Summary</h2>
+      <p class="summary">
+        Data scientist profile (not pure math/physics quant): systematic trading, alpha research, and
+        production-grade ML pipelines from tick data through deployment. Work spans intraday and
+        scalping horizons—tick feeds resampled to intraday bars—with primary research on FX and
+        exposure to equities, crypto, commodities, and options. Strongest fit: end-to-end data science,
+        machine learning, and pipeline engineering for quant and ML research teams.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>QuantMachineLearningLab</h3>
+          <span class="project-tag">Personal research lab · AFML-inspired</span>
+        </div>
+        <p class="project-oneline">
+          Large-scale research codebase inspired by <em>Advances in Financial Machine Learning</em>;
+          end-to-end quant ML from data to experiments (detailed walkthrough via video—too large for a repo snapshot).
+        </p>
+        <ul>
+          <li><strong>Domain:</strong> systematic alpha, feature engineering, labeling, cross-validation suited to financial time series</li>
+          <li><strong>Orchestration:</strong> Dagster · experiment tracking with MLflow</li>
+          <li><strong>Data:</strong> Pandas, Polars, cuDF · PostgreSQL · tick/bar workflows (intraday / scalping)</li>
+          <li><strong>ML:</strong> scikit-learn, cuML, XGBoost (RF/boosting) · HMMs (hmmlearn, pomegranate) · statsmodels</li>
+          <li><strong>Infra:</strong> Docker (PostgreSQL, Dagster, MLflow services)</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>MT5 ML Pipeline on VPS</h3>
+          <span class="project-tag">Personal · live deployment</span>
+        </div>
+        <p class="project-oneline">
+          Deployed an ML trading pipeline on a Contabo VPS integrated with MetaTrader 5—research-to-ops
+          path complementary to the research lab above.
+        </p>
+        <ul>
+          <li><strong>Stack:</strong> Python ML stack · MetaTrader 5 bridge · VPS (Contabo)</li>
+          <li><strong>Focus:</strong> inference/serving loop, operational constraints of a retail/prop-style setup</li>
+          <li><strong>Context:</strong> supports systematic FX work and prop-firm style execution goals</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Inflation Analysis</h3>
+          <span class="project-tag">Personal · exploratory</span>
+        </div>
+        <p class="project-oneline">
+          Short Tableau study on inflation dynamics—data visualization and narrative, outside core quant stack.
+        </p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <dl class="skills-grid">
+        <dt>Languages</dt>
+        <dd>Python · SQL</dd>
+        <dt>ML / Stats</dt>
+        <dd>scikit-learn · XGBoost · cuML · statsmodels · hmmlearn · pomegranate · (no deep learning yet)</dd>
+        <dt>Data</dt>
+        <dd>Pandas · Polars · cuDF · PostgreSQL</dd>
+        <dt>Pipelines</dt>
+        <dd>Dagster · MLflow · Docker (light—DB &amp; orchestration services)</dd>
+        <dt>Markets</dt>
+        <dd>Backtrader (backtest) · dukascopy-node (tick data) · CCXT (crypto data/brokers) · MetaTrader 5</dd>
+        <dt>Focus</dt>
+        <dd>FX (primary) · equities · crypto · commodities · options · intraday / HFT-style bar research from ticks</dd>
+      </dl>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p class="edu-line">
+        <strong>Data Analyst</strong> — OpenClassrooms
+        <span class="edu-detail"> · Jul 2024 – Sep 2025</span>
+      </p>
+    </section>
+
+    <section id="other">
+      <h2>Other</h2>
+      <p class="compact">
+        <strong>Optiver</strong> — market making competition (participant).
+      </p>
+      <p class="compact">
+        <strong>Languages:</strong> French (native) · English (B2).
+      </p>
+    </section>
+  </main>
+</body>
+</html>

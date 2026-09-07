@@ -1,0 +1,31 @@
+/* A4 — single column */
+body {
+  padding: 2.75rem 1rem 1.5rem; /* room for preview nav */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cv-page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  padding: var(--page-pad-y) var(--page-pad-x);
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cv-header {
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+
+.cv-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.9rem;
+}
+
+.cv-links li {
+  margin-bottom: 0;
+}

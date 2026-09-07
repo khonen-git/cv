@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Apprenticeship — Quantitative Trading — Tikehau</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-narrow-sidebar.css">
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Apprenticeship — Quantitative Trading</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Paris · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Disponible octobre 2026</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Recherche quantitative</dt>
+            <dd>séries temporelles · signaux · feature engineering · event-based sampling · backtesting · CPCV · walk-forward · volatilité</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Machine Learning &amp; statistiques</dt>
+            <dd>classification · régression · clustering · réduction de dimension · XGBoost · HMM · GARCH · tests d’hypothèses</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programmation &amp; données</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · scikit-learn · statsmodels · PostgreSQL · Git</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Ingénierie de recherche</dt>
+            <dd>Dagster · MLflow · pytest · Docker · Linux · FastAPI · Joblib · CUDA/RAPIDS · profiling</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP niveau 7<br>
+          <span class="edu-detail">Parcours visé · Alternance prévue sur 18 mois · Oct. 2026</span>
+        </p>
+        <p class="compact">
+          <strong>Diplôme Data Analyst</strong><br>
+          OpenClassrooms — RNCP niveau 6<br>
+          <span class="edu-detail">Juil. 2024 – Sept. 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact">
+          <strong>Optiver Market Making Competition</strong> — participant, 2022.
+        </p>
+        <p class="compact">
+          <strong>Langues :</strong> Français (natif) · Anglais (professionnel).
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Diplômé en Data Analytics, je me suis spécialisé en machine learning financier, en recherche
+          de signaux et en trading systématique. J’ai conçu un laboratoire de recherche Python de bout
+          en bout pour traiter de grands volumes de données tick FX, développer des features et des
+          événements de marché, entraîner des modèles statistiques et de machine learning, conduire
+          des validations robustes hors échantillon, réaliser des backtests et déployer certains modèles
+          dans un environnement live de démonstration. Je recherche une alternance en quantitative
+          trading à partir d’octobre 2026, dans le cadre du parcours OpenClassrooms Data Scientist —
+          Machine Learning, prévu sur 18 mois.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Laboratoire de Machine Learning financier</h3>
+            <span class="project-tag">Signaux · modèles · backtests</span>
+          </div>
+          <p class="project-oneline">
+            Plateforme de recherche indépendante pour l’expérimentation systématique sur données tick FX
+            intraday, initialement inspirée de <em>Advances in Financial Machine Learning</em>
+            (Marcos López de Prado).
+          </p>
+          <ul>
+            <li>Construit des pipelines reproductibles pour inspecter, valider et transformer des données tick FX multi-paires contenant des dizaines de millions d’observations en jeux de données prêts pour la recherche.</li>
+            <li>Conçu des workflows d’échantillonnage d’événements, de labeling et de features autour de la volatilité, des régimes de marché, de la structure des prix et des information-driven bars.</li>
+            <li>Formulé et testé des hypothèses de trading systématique portant sur les définitions d’événements, les jeux de features, les régimes de marché et les horizons de prévision.</li>
+            <li>Évalué des pipelines de modélisation hors échantillon via purging, embargo, walk-forward et combinatorial purged cross-validation.</li>
+            <li>Mis en place des workflows de benchmark (baselines statistiques, forêts d’arbres, XGBoost, HMM de régimes, prévisions de volatilité type GARCH).</li>
+            <li>Développé des workflows de backtesting intégrant sélection de trades, dimensionnement de positions et diagnostics de performance.</li>
+            <li>Orchestré des workflows paramétrés de données, features, labels et modèles avec Dagster ; versionné le code et les configurations avec Git, et suivi les paramètres, métriques et artefacts avec MLflow.</li>
+            <li>Développé des tests unitaires, d’intégration, de performance et end-to-end sur le traitement des données, les features, le labeling, la validation et la modélisation.</li>
+            <li>Comparé les exécutions CPU et GPU, en utilisant CUDA, cuML et XGBoost GPU pour l’entraînement, tout en conservant des chemins CPU lorsque les coûts mémoire ou de transfert de cuDF/CuPy annulaient les gains.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Modélisation de volatilité d’options</h3>
+            <span class="project-tag">Finance de marché</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline reproductible couvrant le nettoyage de données de marché, le pricing Black–Scholes
+            et les Greeks, l’inversion numérique de volatilité implicite, la calibration de surfaces
+            SVI/SSVI et la calibration du modèle de Heston sur des données d’options cotées.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Pipeline live de données et d’exécution</h3>
+            <span class="project-tag">Recherche → outil</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline déployé sur compte démo reliant la récupération de ticks en temps réel, le calcul
+            de features en Python, le chargement de modèles avec Joblib, l’inférence et l’exécution via
+            l’API Python de MetaTrader 5, avec logs structurés, validations à l’exécution et garde-fous
+            opérationnels.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../cv/paginate-screen.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Data Scientist</title>
+  <link rel="stylesheet" href="../cv/base.css">
+  <link rel="stylesheet" href="../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../cv/screen-a4.css">
+  <link rel="stylesheet" href="../cv/print.css" media="print">
+  <link rel="stylesheet" href="layout-narrow-sidebar.css">
+  <style>
+    :root { --sidebar-w: 66mm; }
+  </style>
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Data Scientist</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Paris · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Disponible octobre 2026</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Machine Learning &amp; statistiques</dt>
+            <dd>classification · régression · clustering · réduction de dimension · séries temporelles · feature engineering · sélection de variables · validation · XGBoost · HMM · modèles statistiques</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programmation &amp; données</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · scikit-learn · statsmodels · PostgreSQL · Git</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Data Engineering &amp; MLOps</dt>
+            <dd>Dagster · MLflow · pytest · Docker · FastAPI · Joblib · Linux · pipelines de données · expérimentation reproductible</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Analyse &amp; visualisation</dt>
+            <dd>analyse exploratoire · statistiques descriptives · Power BI · matplotlib · Plotly · Streamlit · restitution des résultats</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP niveau 7<br>
+          <span class="edu-detail">Parcours visé · Alternance prévue sur 18 mois · Oct. 2026</span>
+        </p>
+        <p class="compact">
+          <strong>Diplôme Data Analyst</strong><br>
+          OpenClassrooms — RNCP niveau 6<br>
+          <span class="edu-detail">Juil. 2024 – Sept. 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact">
+          <strong>Langues :</strong> Français (natif) · Anglais (professionnel).
+        </p>
+        <p class="compact">
+          <strong>Disponibilité :</strong> alternance à partir d'octobre 2026.
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Diplômé en Data Analytics et futur étudiant du parcours Data Scientist — Machine Learning,
+          je développe des projets couvrant l'ensemble du cycle de vie d'une analyse ML :
+          préparation et exploration de données, feature engineering, modélisation statistique et
+          machine learning, validation, expérimentation reproductible et restitution.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Laboratoire de recherche ML sur séries temporelles</h3>
+            <span class="project-tag">Data Science · séries temporelles · expérimentation</span>
+          </div>
+          <p class="project-oneline">
+            Plateforme Python de recherche appliquée à des données tick FX intraday, conçue comme un
+            environnement complet de préparation, analyse, modélisation et validation sur grands volumes de données (millions d'occurences).
+          </p>
+          <ul>
+            <li>Construit des pipelines reproductibles pour contrôler, transformer et exploiter plusieurs dizaines de millions d'observations en jeux de données utilisables pour la modélisation.</li>
+            <li>Développe des workflows d'échantillonnage d'événements, de feature engineering et de construction de cibles sur des problèmes prédictifs de séries temporelles.</li>
+            <li>Compare des approches statistiques et de machine learning, dont modèles linéaires, ensembles d'arbres, XGBoost et HMM, avec validation hors échantillon.</li>
+            <li>Évalue la robustesse via walk-forward, purging, embargo et combinatorial purged cross-validation.</li>
+            <li>Suit les expériences avec Dagster et MLflow, et renforce la fiabilité avec tests unitaires, intégration et end-to-end.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Projets Data Analytics et visualisation</h3>
+            <span class="project-tag">EDA · SQL · restitution métier</span>
+          </div>
+          <p class="project-oneline">
+            Ensemble de projets OpenClassrooms autour de l'étude de marché, de l'analyse des ventes,
+            de l'étude sur l'eau et de la visualisation de données, utilisés pour structurer une
+            démarche complète d'analyse et de restitution.
+          </p>
+          <ul>
+            <li>Mène des analyses exploratoires, nettoyages, contrôles de cohérence et synthèses statistiques sur des jeux de données orientés business.</li>
+            <li>Mobilise Python, SQL et des visualisations pour faire ressortir tendances, segments, anomalies et facteurs explicatifs.</li>
+            <li>Produit des supports de restitution actionnables, notamment dashboards et livrables de synthèse pour la prise de décision.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Dashboard Power BI</h3>
+            <span class="project-tag">BI · KPI · data storytelling</span>
+          </div>
+          <p class="project-oneline">
+            Réalisation d'un tableau de bord de suivi avec indicateurs, visualisations et narration
+            pour transformer des données brutes en lecture décisionnelle.
+          </p>
+          <ul>
+            <li>Structure les indicateurs et vues de synthèse pour faciliter le suivi et la communication des résultats.</li>
+            <li>Met l'accent sur la clarté de lecture, la hiérarchisation de l'information et la restitution à un public non technique.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../cv/paginate-screen.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — V.I.E Research — Quantitative Research — QRT</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-narrow-sidebar.css">
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">V.I.E Research — Quantitative Research</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">France · Open to relocation to London</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Available immediately</span>
+          <span class="cv-meta-item cv-meta-item--contract">V.I.E candidate</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Quantitative Research</dt>
+            <dd>predictive signals · hypothesis testing · event-based sampling · financial time series · multi-horizon analysis · out-of-sample evaluation</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Statistics &amp; Machine Learning</dt>
+            <dd>regression · classification · tree ensembles · XGBoost · feature selection · regime models · volatility modelling · model diagnostics</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Time-Series Validation</dt>
+            <dd>temporal cross-validation · walk-forward analysis · purging · embargo · CPCV · leakage control · benchmark design</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programming &amp; Data</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · scikit-learn · CUDA/RAPIDS (cuDF · cuPy · cuML) · statsmodels · XGBoost · PostgreSQL · Git</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Research Engineering</dt>
+            <dd>Dagster · MLflow · pytest · Docker · Linux · profiling · Streamlit · Plotly</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="compact">
+          <strong>Data Analyst Diploma</strong><br>
+          OpenClassrooms — French RNCP Level 6<br>
+          <span class="edu-detail">Jul. 2024 – Sep. 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Additional Information</h2>
+        <p class="compact">
+          <strong>Languages:</strong><br>
+          French — native<br>
+          English — B2, professional working proficiency
+        </p>
+        <p class="compact">
+          <strong>Optiver Market Making Competition</strong><br>
+          Participant, 2022
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profile</h2>
+        <p class="summary">
+          Quantitative research candidate focused on predictive signal discovery,
+          financial time series and applied machine learning. Built an independent
+          Python research platform to process tens of millions of FX tick observations,
+          formulate and test event-driven hypotheses, engineer multi-horizon datasets,
+          and evaluate models under leakage-aware out-of-sample protocols. My work
+          emphasizes reproducible experimentation, statistical baselines and the
+          rejection of hypotheses that fail to demonstrate incremental predictive value.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Financial Machine Learning Research Lab</h3>
+            <span class="project-tag">Predictive signals · FX tick data</span>
+          </div>
+          <p class="project-oneline">
+            Independent quantitative research platform for designing and evaluating
+            predictive hypotheses on high-frequency FX data across multiple time scales.
+          </p>
+          <ul>
+            <li>
+              Built reproducible pipelines to inspect, clean and transform tens of millions
+              of multi-pair FX tick observations into research-ready event and bar datasets.
+            </li>
+            <li>
+              Designed event-based sampling and feature-engineering workflows around
+              volatility, market regimes, price dynamics and information-driven bars,
+              with explicit prediction horizons and control samples.
+            </li>
+            <li>
+              Formulated and tested hypotheses on whether statistically defined market
+              events contain incremental predictive information relative to random and
+              conditionally matched baselines.
+            </li>
+            <li>
+              Evaluated classification and volatility-modelling pipelines using temporal
+              holdouts, walk-forward analysis, purging, embargo and combinatorial purged
+              cross-validation to reduce leakage from overlapping observations.
+            </li>
+            <li>
+              Benchmarked linear and tree-based models, XGBoost, hidden Markov regime
+              models and GARCH-family volatility forecasts, with emphasis on stability,
+              calibration and out-of-sample performance rather than in-sample fit.
+            </li>
+            <li>
+              Orchestrated configurable data, feature, label and model workflows with
+              Dagster and MLflow, supported by unit, integration, performance and
+              end-to-end tests.
+            </li>
+            <li>
+              Developed interactive diagnostics to inspect sampled events, labels,
+              predictions and regime behaviour, enabling failed hypotheses and data
+              issues to be identified before strategy-level backtesting.
+            </li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Implied Volatility Modelling</h3>
+            <span class="project-tag">Options · numerical methods</span>
+          </div>
+          <p class="project-oneline">
+            Developed a reproducible options-data workflow covering data cleaning,
+            Black–Scholes pricing and Greeks, numerical implied-volatility inversion,
+            and volatility-surface analysis on listed options data.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Live Market Data and Model Inference Pipeline</h3>
+            <span class="project-tag">Research deployment</span>
+          </div>
+          <p class="project-oneline">
+            Deployed a demonstration pipeline connecting real-time tick ingestion,
+            Python feature computation, model loading and inference to MetaTrader 5,
+            with structured logging, runtime validation, operational guardrails and
+            a Python/MQL5 interface.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../cv/paginate-screen.js"></script>
+</body>
+</html>

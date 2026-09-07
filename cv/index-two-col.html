@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Two columns (A4)</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout-two-col.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+  <nav class="preview-nav" aria-label="Layout variants">
+    <a href="index.html">Single column</a>
+    <a href="index-two-col.html" aria-current="page">Two columns</a>
+  </nav>
+
+  <main class="cv-page cv--two-col">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <!-- TODO: replace placeholders -->
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Quant Researcher · ML &amp; Data Science</p>
+        <div class="cv-meta">
+          <span>France</span>
+          <span class="sep">Open to international · Remote / relocation</span>
+          <span class="sep">Available immediately</span>
+          <span class="sep">Internship · Full-time</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Languages</dt>
+            <dd>Python · SQL</dd>
+          </div>
+          <div class="skill-row">
+            <dt>ML / Stats</dt>
+            <dd>scikit-learn · XGBoost · cuML · statsmodels · hmmlearn · pomegranate</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Data</dt>
+            <dd>Pandas · Polars · cuDF · PostgreSQL</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Pipelines</dt>
+            <dd>Dagster · MLflow · Docker</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Markets</dt>
+            <dd>Backtrader · dukascopy-node · CCXT · MetaTrader 5</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Focus</dt>
+            <dd>FX (primary) · equities · crypto · commodities · options · intraday / HFT sampling</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="edu-line">
+          <strong>Data Analyst</strong><br>
+          OpenClassrooms<br>
+          <span class="edu-detail">Jul 2024 – Sep 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Other</h2>
+        <p class="compact">
+          <strong>Optiver</strong> — market making competition (participant).
+        </p>
+        <p class="compact">
+          <strong>Languages:</strong> French (native) · English (B2).
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Summary</h2>
+        <p class="summary">
+          Aspiring quant researcher with a data science/ML background, I am passionate about 
+          financial markets, systematic trading, alpha research, and production-grade ML pipelines 
+          from tick data through deployment. My strongest fit is end-to-end data science,
+          machine learning, and pipeline engineering for quant and ML research teams. I am currently
+          looking for an internship or full-time opportunity in the quant or ML research field.
+          I am working on a large-scale research codebase inspired by <em>Advances in Financial Machine Learning</em>;
+          end-to-end quant ML from data to experiments in order to deploy a production-grade ML pipeline for systematic 
+          trading on a prop firm account such as FTMO. I also love games of incomplete information & game theory such
+          as poker and Catan. My long term goal is to improve my skills in data science and machine learning and my 
+          understanding of financial markets related to quantitative space.
+        </p>
+        
+
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>FinancialMachineLearningLab</h3>
+            <span class="project-tag">AFML-inspired research lab</span>
+          </div>
+          <p class="project-oneline">
+            Large-scale research codebase inspired by <em>Advances in Financial Machine Learning</em>;
+            end-to-end quant ML from data to experiments (walkthrough via video).
+          </p>
+          <ul>
+            <li><strong>Domain:</strong> systematic alpha, feature engineering, labeling, financial time-series CV</li>
+            <li><strong>Orchestration:</strong> Dagster · MLflow</li>
+            <li><strong>Data:</strong> Pandas, Polars, cuDF · PostgreSQL · tick/bar intraday workflows</li>
+            <li><strong>ML:</strong> scikit-learn, cuML, XGBoost · HMMs (hmmlearn, pomegranate) · statsmodels</li>
+            <li><strong>Infra:</strong> Docker (PostgreSQL, Dagster, MLflow)</li>
+            <li><strong>Reporting:</strong> Plotly, UI with html/css/javascript, UI with Streamlit</li>
+            <li><strong>Deployment:</strong> Joblib, FastAPI</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>MT5 ML Pipeline on VPS</h3>
+            <span class="project-tag">Live deployment</span>
+          </div>
+          <p class="project-oneline">
+            ML trading pipeline on Contabo VPS with MetaTrader 5—research-to-ops complement to the lab above.
+          </p>
+          <ul>
+            <li><strong>Stack:</strong> Python · MetaQuotes Language 5 · VPS (Contabo)</li>
+            <li><strong>Real time execution:</strong> inference loop, tick ingestion, pipeline processing and execution</li>
+            <li><strong>Monitoring:</strong> json logs, guardrails, error handling · prop firm constraints</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Dashboard on Inflation</h3>
+            <span class="project-tag">Study</span>
+          </div>
+          <p class="project-oneline">
+            Short Tableau study on inflation dynamics—visualization-focused, outside core quant stack. Explained the 
+            concepts of CPI and monetary mass M2/M3 and their relationship. Debunking some economic myths such as the 
+            phillips curve.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Other Projects</h3>
+          </div>
+          <p class="project-oneline">
+            Others projects, including OpenClassrooms projects are available on my Website or on my GitHub.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

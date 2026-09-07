@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Desk Quant Analyst — Squarepoint</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-narrow-sidebar.css">
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Desk Quant Analyst</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">France · Open to relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Graduate · Available immediately</span>
+          <span class="cv-meta-item cv-meta-item--contract">Full-time · Early career</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Programming &amp; Systems</dt>
+            <dd>Python · SQL · Linux · Bash · Git · Docker · PostgreSQL · FastAPI</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Software Engineering</dt>
+            <dd>pytest · unit/integration/E2E testing · modular design · configuration-driven pipelines · logging · profiling · runtime validation</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Data &amp; Workflows</dt>
+            <dd>tick data · pandas · Polars · NumPy · CUDA/RAPIDS · Dagster · MLflow · batch processing</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Quantitative Methods</dt>
+            <dd>time-series analysis · backtesting · CPCV · volatility models · machine learning</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="compact">
+          <strong>Bachelor-level Diploma in Data Analysis</strong><br>
+          OpenClassrooms, France — RNCP Level 6<br>
+          <span class="edu-detail">Jul 2024 – Sep 2025</span>
+        </p>
+      </section>
+
+      <section id="languages">
+        <h2>Languages</h2>
+        <p class="compact">French — Native · English — Professional working proficiency</p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Summary</h2>
+        <p class="summary">
+          Quantitative analyst candidate with hands-on experience building, testing and operating Python
+          pipelines for systematic trading research. Developed configuration-driven workflows for FX tick
+          data, job orchestration, data validation, runtime monitoring and performance profiling across
+          historical and live demo environments.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Systematic Trading Research &amp; Engineering Lab</h3>
+            <span class="project-tag">Pipelines · data · reliability</span>
+          </div>
+          <p class="project-oneline">
+            Independent Python platform for systematic trading research and engineering, incorporating
+            leakage-aware validation methods from Marcos López de Prado’s
+            <em>Advances in Financial Machine Learning</em>.
+          </p>
+          <ul>
+            <li>Designed configuration-driven pipelines for transforming multi-pair FX datasets containing tens of millions of ticks into reproducible research datasets and model inputs.</li>
+            <li>Developed unit, integration, performance and end-to-end tests across data-processing, event-sampling, labeling, validation, modeling and deployment workflows.</li>
+            <li>Orchestrated dependent research jobs with Dagster, versioned code and configurations with Git, and tracked experiment parameters, metrics and artifacts with MLflow.</li>
+            <li>Added automated checks for missing values, duplicated records and expected data schemas before downstream processing.</li>
+            <li>Profiled CPU and GPU execution and memory usage across tick-data, cross-validation and model-training workflows, using CUDA acceleration selectively where it delivered practical end-to-end gains.</li>
+            <li>Structured research components around reusable interfaces and configuration schemas to support repeatable experiments and controlled deployment changes.</li>
+            <li>Built historical diagnostic and visualization tools for inspecting market data, events, labels, features and model predictions.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Live Market Data and Execution Pipeline</h3>
+            <span class="project-tag">Demo account · ops validation</span>
+          </div>
+          <p class="project-oneline">
+            Demo-account system built to validate the integration and operational reliability of live
+            market-data, inference and execution components.
+          </p>
+          <ul>
+            <li>Integrated live tick retrieval and order execution through the MetaTrader 5 Python API, with feature computation and model inference performed in Python.</li>
+            <li>Persisted trained models with Joblib and exposed selected inference components through FastAPI.</li>
+            <li>Instrumented the pipeline with structured JSON logging, runtime validation, exception handling and execution guardrails for failure diagnosis.</li>
+            <li>Operated the system continuously on a demo account to test component integration and runtime behavior under live market conditions.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Options Volatility Modeling</h3>
+            <span class="project-tag">Pricing · calibration</span>
+          </div>
+          <p class="project-oneline">
+            Built an options-volatility pipeline covering Black–Scholes pricing and Greeks, numerical
+            implied-volatility inversion, SVI/SSVI surface calibration and Heston calibration against
+            listed-options data.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../cv/paginate-screen.js"></script>
+</body>
+</html>

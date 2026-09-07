@@ -1,0 +1,15 @@
+{
+  "_note": "Optional reference copy of content; HTML is source of truth for now.",
+  "profile": {
+    "title": "Quant Researcher · ML & Data Science",
+    "location": "France",
+    "availability": "Immediately — internship or full-time",
+    "international": true
+  },
+  "summary": "Data scientist profile: systematic trading, alpha research, end-to-end ML pipelines from ticks to VPS. Primary FX; also equities, crypto, commodities, options.",
+  "projects": [
+    "QuantMachineLearningLab",
+    "MT5 ML Pipeline on VPS",
+    "Inflation Analysis"
+  ]
+}

@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Apprenticeship – 1 Year – Data Science F/M — Natixis</title>
+  <link rel="stylesheet" href="../../../cv/base.css">
+  <link rel="stylesheet" href="../../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../../shared/layout-narrow-sidebar.css">
+  <style>
+    :root { --sidebar-w: 68mm; }
+  </style>
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Apprenticeship – 1 Year – Data Science F/M</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Paris · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Available September 2026</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Data Science &amp; Machine Learning</dt>
+            <dd>classification · regression · clustering · feature engineering · time series · XGBoost · HMM · GARCH · hypothesis testing · out-of-sample validation</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programming &amp; Data Analysis</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · scikit-learn · statsmodels · PostgreSQL · Power BI · Git</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Market Data &amp; Finance</dt>
+            <dd>tick data · market data · volatility · liquidity · signals · event-based sampling · information-driven bars · options pricing · backtesting</dd>
+          </div>
+          <div class="skill-row">
+            <dt>ML Engineering &amp; Software Quality</dt>
+            <dd>Dagster · MLflow · pytest · Docker · Linux · FastAPI · Joblib · CUDA/RAPIDS · profiling</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP Level 7<br>
+          <span class="edu-detail">
+            Planned apprenticeship starting September 2026 · Expected duration: 18 months<br>
+            Schedule: 4 days in company / 1 day in training · Contract: apprenticeship or professionalisation contract
+          </span>
+        </p>
+        <p class="compact">
+          <strong>Data Analyst Diploma</strong><br>
+          OpenClassrooms — RNCP Level 6<br>
+          <span class="edu-detail">Jul. 2024 – Sep. 2025</span><br>
+          <span class="edu-detail">Python · SQL · machine learning · statistics · data visualisation · Power BI</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Additional Information</h2>
+        <p class="compact">
+          <strong>Optiver Market Making Competition</strong> — participant, 2022.
+        </p>
+        <p class="compact">
+          <strong>Languages:</strong> French (native) · English (professional).
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profile</h2>
+        <p class="summary">
+          Data Analytics graduate specialised in machine learning applied to financial
+          data and time series. Built an end-to-end Python research laboratory to process
+          tens of millions of market observations, engineer and evaluate features, train
+          statistical and machine-learning models, and run robust out-of-sample validation.
+          Related work covers options volatility modelling and real-time inference pipelines.
+          Seeking an apprenticeship within a Data Science team working directly on financial-market
+          data and modelling problems, starting September 2026, as part of the OpenClassrooms
+          Data Scientist — Machine Learning programme.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Financial Machine Learning Research Lab</h3>
+            <span class="project-tag">Machine Learning · financial market data · time series</span>
+          </div>
+          <p class="project-oneline">
+            Independent Python research and experimentation platform on tens of millions of
+            intraday FX tick observations, initially inspired by
+            <em>Advances in Financial Machine Learning</em> (Marcos López de Prado).
+          </p>
+          <ul>
+            <li>
+              Built reproducible pipelines for ingestion, quality control, transformation and
+              analysis of large-scale multi-pair FX tick data.
+            </li>
+            <li>
+              Developed feature-engineering workflows focused on volatility, market regimes,
+              price structure and information-driven bars.
+            </li>
+            <li>
+              Formulated and evaluated predictive problems on financial data with statistical
+              and machine-learning models, including linear models, tree ensembles, XGBoost
+              and HMMs.
+            </li>
+            <li>
+              Compared models against baselines and assessed out-of-sample generalisation with
+              walk-forward analysis, purging, embargo and combinatorial purged cross-validation.
+            </li>
+            <li>
+              Implemented volatility models and time-series analyses, including GARCH-family
+              methods, together with sampling and labelling workflows suited to financial data.
+            </li>
+            <li>
+              Orchestrated data, feature, label and model pipelines with Dagster and tracked
+              experiments, parameters, metrics and artefacts with MLflow.
+            </li>
+            <li>
+              Built unit, integration, performance and end-to-end tests; the public framework
+              includes around 950 automated tests.
+            </li>
+            <li>
+              Profiled CPU/GPU workloads and experimented with CUDA, cuML and GPU-accelerated
+              XGBoost where acceleration was relevant.
+            </li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Options Volatility Modelling</h3>
+            <span class="project-tag">Pricing · financial data · calibration</span>
+          </div>
+          <p class="project-oneline">
+            Reproducible Python pipeline on listed options data: market-data cleaning and
+            controls, Black–Scholes pricing and Greeks, numerical implied-volatility estimation,
+            then calibration and comparison of SVI/SSVI surfaces and the Heston model.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Live Data and Inference Pipeline</h3>
+            <span class="project-tag">Real-time · ML Engineering</span>
+          </div>
+          <p class="project-oneline">
+            Demonstration pipeline connecting real-time tick ingestion, Python feature
+            computation, Joblib model loading and inference via MetaTrader 5, with structured
+            logging, runtime validation and operational guardrails.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../../cv/paginate-screen.js"></script>
+</body>
+</html>

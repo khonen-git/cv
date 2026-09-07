@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Data Scientist MLOps</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-narrow-sidebar.css">
+  <style>
+    :root { --sidebar-w: 66mm; }
+  </style>
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Data Scientist — MLOps</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Paris · Relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Disponible immédiatement</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Machine Learning &amp; statistiques</dt>
+            <dd>classification · régression · clustering · séries temporelles · feature engineering · validation · XGBoost · HMM · modèles statistiques</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programmation &amp; données</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · PostgreSQL · scikit-learn · Git · Linux</dd>
+          </div>
+          <div class="skill-row">
+            <dt>ML Engineering &amp; MLOps</dt>
+            <dd>Dagster · MLflow · Docker · FastAPI · pytest · Joblib · logs structurés · validation runtime · profiling CPU/GPU</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Livraison &amp; visualisation</dt>
+            <dd>pipelines de données · expérimentation reproductible · API d'inférence · Streamlit · Plotly · Power BI</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms — RNCP niveau 7<br>
+          <span class="edu-detail">Parcours visé · Alternance prévue sur 18 mois · dès maintenant</span>
+        </p>
+        <p class="compact">
+          <strong>Diplôme Data Analyst</strong><br>
+          OpenClassrooms — RNCP niveau 6<br>
+          <span class="edu-detail">Juil. 2024 – Sept. 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact">
+          <strong>Langues :</strong> Français (natif) · Anglais (professionnel).
+        </p>
+        <p class="compact">
+          <strong>Environnements :</strong> Docker · PostgreSQL · API · outillage de test.
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Diplômé en Data Analytics et futur étudiant du parcours Data Scientist — Machine Learning,
+          je développe des projets ML couvrant la préparation de données, la modélisation, la
+          validation robuste et la mise en production d'outils reproductibles. Mon expérience
+          personnelle met l'accent sur l'orchestration de pipelines, le suivi d'expérimentations,
+          la qualité logicielle, l'optimisation d'exécutions CPU/GPU et l'exposition de services
+          d'inférence. Je recherche une alternance en Data Science orientée engineering ou MLOps dès maintenant.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Laboratoire ML reproductible sur séries temporelles</h3>
+            <span class="project-tag">Pipelines · orchestration · qualité</span>
+          </div>
+          <p class="project-oneline">
+            Environnement Python modulaire de recherche et d'expérimentation sur données tick FX,
+            pensé pour industrialiser le passage des données brutes aux modèles évalués.
+          </p>
+          <ul>
+            <li>Orchestre des pipelines paramétrés de données, features, labels et modèles avec Dagster, avec suivi des paramètres, métriques et artefacts dans MLflow.</li>
+            <li>Développe une architecture testée couvrant traitement de données, calculs de features, validation et modélisation, avec environ 950 tests automatisés sur le framework public.</li>
+            <li>Compare les exécutions CPU et GPU sur certaines briques d'entraînement et de traitement pour arbitrer gains de performance, coûts mémoire et stabilité.</li>
+            <li>Versionne le code et les configurations avec Git et structure les sorties pour rendre les expériences reproductibles et auditables.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Pipeline live de données et d'inférence</h3>
+            <span class="project-tag">Déploiement · inférence temps réel</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline de démonstration reliant ingestion temps réel, calcul de features, chargement
+            de modèles, inférence et exécution, avec observabilité et garde-fous opérationnels.
+          </p>
+          <ul>
+            <li>Intègre la récupération de données, le prétraitement, l'inférence et l'exécution dans une boucle automatisée.</li>
+            <li>Ajoute logs structurés, validations runtime, gestion d'erreurs et contrôles défensifs pour limiter les défaillances opérationnelles.</li>
+            <li>Mobilise Python, Joblib, FastAPI, Docker et MetaTrader 5 dans une logique de passage de la recherche vers un outil exploitable.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Projets Data Analytics et dashboards</h3>
+            <span class="project-tag">Données · BI · restitution</span>
+          </div>
+          <p class="project-oneline">
+            Projets OpenClassrooms complétés par des livrables de visualisation et de restitution pour
+            couvrir aussi les usages analytiques et la communication des résultats.
+          </p>
+          <ul>
+            <li>Travaille sur des jeux de données business via nettoyage, analyse exploratoire, SQL, visualisation et synthèse.</li>
+            <li>Produit des dashboards et supports de restitution permettant de relier la chaîne data aux besoins métier.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../cv/paginate-screen.js"></script>
+</body>
+</html>

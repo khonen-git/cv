@@ -1,0 +1,42 @@
+/* Override: wider left column for denser FR CVs in cv-perso */
+:root {
+  --sidebar-w: 78mm;
+}
+
+.cv-page.cv--two-col {
+  grid-template-columns: var(--sidebar-w) 1fr;
+  background: linear-gradient(to right, var(--sidebar-bg) var(--sidebar-w), #fff var(--sidebar-w));
+}
+
+.cv-page.cv--two-col::before {
+  left: var(--sidebar-w);
+}
+
+/* Screen A4 sheets created by paginate-screen.js */
+.cv-sheet--two-col {
+  background: linear-gradient(to right, var(--sidebar-bg) var(--sidebar-w), #fff var(--sidebar-w));
+}
+
+.cv-sheet--two-col::after {
+  left: var(--sidebar-w);
+}
+
+/* Slightly tighter sidebar so "Autres" fits on page 1 */
+.cv--two-col .cv-sidebar section {
+  margin-bottom: 0.5rem;
+}
+
+.cv--two-col .cv-sidebar .cv-header {
+  margin-bottom: 0.55rem;
+}
+
+.cv--two-col .cv-sidebar .compact {
+  margin: 0 0 0.35rem;
+}
+
+@media print {
+  .cv--two-col .cv-sidebar {
+    width: var(--sidebar-w);
+    flex: 0 0 var(--sidebar-w);
+  }
+}

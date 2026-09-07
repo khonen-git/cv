@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Hedging & Market Risk Analyst — TotalEnergies</title>
+  <link rel="stylesheet" href="../../../cv/base.css">
+  <link rel="stylesheet" href="../../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../../shared/layout-wide-sidebar.css">
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Analyste Risques de Marché &amp; Couverture</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">Toulouse · Relocation Paris</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Alternance 18 mois · OpenClassrooms</span>
+          <span class="cv-meta-item cv-meta-item--contract">Disponible immédiatement</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Compétences</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Finance de marché</dt>
+            <dd>dérivés · Black-Scholes · Greeks (delta, gamma) · volatilité implicite · notions de VaR · couverture · P&amp;L · mark-to-market</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Analyse quantitative</dt>
+            <dd>séries temporelles · probabilités · inférence statistique · optimisation · stress / scénarios · backtesting</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Développement &amp; data</dt>
+            <dd>Python · SQL (MySQL, PostgreSQL) · Excel · VBA · Git · Bash</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Outils &amp; automatisation</dt>
+            <dd>Streamlit · Plotly · Next.js · reporting HTML/CSS/JS · dashboards · automatisation de pipelines</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Machine Learning</dt>
+            <dd>régression · classification · feature engineering · validation de modèles · GARCH</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Formation</h2>
+        <p class="compact">
+          <strong>Data Scientist — Machine Learning</strong><br>
+          OpenClassrooms (alternance 18 mois)<br>
+          <span class="edu-detail">En cours / à démarrer</span>
+        </p>
+        <p class="compact">
+          <strong>Data Analyst — Bachelor (RNCP)</strong><br>
+          OpenClassrooms<br>
+          <span class="edu-detail">Juil. 2024 – Sep. 2025</span>
+        </p>
+        <p class="compact">
+          <strong>Cursus ingénieur</strong><br>
+          Télécom Saint-Étienne<br>
+          <span class="edu-detail">2021 – 2023 · non validé</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Autres</h2>
+        <p class="compact">
+          <strong>Optiver</strong> — compétition market making (2022).
+        </p>
+        <p class="compact">
+          <strong>Langues :</strong> Français (natif) · Anglais (B2).
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Profil</h2>
+        <p class="summary">
+          Profil quantitatif motivé par le suivi des expositions, la couverture et le pilotage du risque de marché.
+          Expérience projet en finance de marché (FX, options) : pricing, sensibilités (Greeks), analyse de P&amp;L
+          et développement d’outils Python / SQL / Excel pour automatiser analyses et reporting.
+          Candidat en alternance, prêt à se spécialiser sur les marchés gaz/électricité et les métriques de risque
+          d’Energy Management (expositions, VaR, stress tests, hedging).
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Laboratoire de recherche quantitative</h3>
+            <span class="project-tag">Outils · automatisation · P&amp;L</span>
+          </div>
+          <p class="project-oneline">
+            Plateforme de recherche end-to-end sur données de marché intradaily (FX) :
+            traitement des données, indicateurs, validation, backtesting et reporting — orientée décision et suivi de performance.
+          </p>
+          <ul>
+            <li><strong>Analyse &amp; suivi :</strong> pipelines de données tick/bar, indicateurs de performance et de risque, workflows de backtesting et de P&amp;L</li>
+            <li><strong>Automatisation :</strong> orchestration (Dagster), suivi d’expériences (MLflow), reporting Plotly / Streamlit / HTML–JS</li>
+            <li><strong>Data :</strong> Python (pandas, polars, NumPy, SciPy) · SQL (PostgreSQL, MySQL) · Docker</li>
+            <li><strong>Volatilité :</strong> modèles de type GARCH pour le suivi de la variabilité des prix</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Surface de volatilité implicite</h3>
+            <span class="project-tag">Pricing · Greeks · couverture</span>
+          </div>
+          <p class="project-oneline">
+            Construction d’une surface de volatilité implicite à partir de données d’options (Black-Scholes),
+            avec focus sur le pricing et les sensibilités utiles à la couverture.
+          </p>
+          <ul>
+            <li><strong>Méthodes :</strong> pricing Black-Scholes · inversion de volatilité implicite · Greeks (delta, gamma) · surface de volatilité</li>
+            <li><strong>Extensions :</strong> paramétrisation SVI/SSVI · calibration modèle de Heston</li>
+            <li><strong>Transfert :</strong> cadre applicable au suivi des sensibilités et au dimensionnement de couvertures</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Pipeline ML déployé (VPS)</h3>
+            <span class="project-tag">Suivi temps réel · industrialisation</span>
+          </div>
+          <p class="project-oneline">
+            Pipeline opérationnel sur VPS : ingestion live, calcul d’indicateurs, inférence et pont d’exécution —
+            complément « run &amp; monitor » au laboratoire de recherche.
+          </p>
+          <ul>
+            <li><strong>Stack :</strong> Python · MQL5 · VPS (Contabo)</li>
+            <li><strong>Ops :</strong> boucle temps réel, logs structurés JSON, garde-fous et contrôles d’exécution</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Outils web &amp; reporting</h3>
+            <span class="project-tag">Dashboards · front-end</span>
+          </div>
+          <p class="project-oneline">
+            Site personnel en Next.js et rapports interactifs HTML/CSS/JS pour valoriser analyses et résultats de recherche.
+          </p>
+          <ul>
+            <li><strong>Stack :</strong> Next.js · JavaScript · HTML/CSS · Streamlit · Excel / VBA pour prototypes et automatisations</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../../cv/paginate-screen.js"></script>
+</body>
+</html>

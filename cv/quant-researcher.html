@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Two columns (A4)</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="layout-two-col.css">
+  <link rel="stylesheet" href="screen-a4.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <!-- TODO: replace placeholders -->
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Quant Researcher</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">France</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Graduate · Available immediately</span>
+          <span class="cv-meta-item cv-meta-item--mobility">Open to international · Remote / relocation</span>
+          <span class="cv-meta-item cv-meta-item--contract">Full-time</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Math & Statistics</dt>
+            <dd>probability · statistical inference · linear algebra · hypothesis testing · optimization · time series</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programming</dt>
+            <dd>Python · SQL · Git · Bash</dd>
+          </div>
+          <div class="skill-row">
+            <dt>ML</dt>
+            <dd>classification · regression · clustering · dimensionality reduction · feature engineering · model validation</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Quant Finance</dt>
+            <dd>derivatives · Black-Scholes · Greeks · implied volatility · GARCH</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Quant Research</dt>
+            <dd>event-based sampling · triple barrier & meta labeling · fractional differencing · walk-forward · combinatorial purged cross-validation · backtesting · bet sizing</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="compact">
+          <strong>Data Analyst Degree - BS</strong><br>
+          (French RNCP), OpenClassrooms<br>
+          <span class="edu-detail">Jul 2024 - Sep 2025</span>
+        </p>
+      </section>
+
+      <section id="other">
+        <h2>Other</h2>
+        <p class="compact">
+          <strong>Optiver</strong> — market making competition (participant).<br>
+          <span class="edu-detail">2022</span>
+        </p>
+        <p class="compact">
+          <strong>Languages:</strong><br>
+          French (native) · English (B2).
+        </p>
+        <p class="compact">
+          <strong>Games of incomplete/imperfect information:</strong><br>
+          Poker · Catan
+        </p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Summary</h2>
+        <p class="summary">
+          Quant/ML researcher candidate focused on financial time series, systematic alpha research and
+          applied financial machine learning. Built an end-to-end research laboratory covering tick-level data
+          processing, event-based sampling, feature and label engineering, model training, financial
+          time-series validation, bet sizing and backtesting.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Financial ML Research Lab</h3>
+            <span class="project-tag">Public financial ML research laboratory</span>
+          </div>
+          <p class="project-oneline">
+            Large-scale research codebase inspired by <em>Advances in Financial Machine Learning</em>;
+            end-to-end workflow for systematic alpha research on intraday market data.
+          </p>
+          <ul>
+            <li><strong>Research pipeline:</strong> tick/bar data processing, event-based sampling, feature engineering, triple-barrier labeling and model evaluation</li>
+            <li><strong>Validation:</strong> financial time-series CV, purging/embargo logic, walk-forward testing and backtesting workflows</li>
+            <li><strong>Orchestration:</strong> Dagster · MLflow</li>
+            <li><strong>Data:</strong> pandas, polars, cuDf · NumPy, SciPy, cuPy · PostgreSQL · tick/bar intraday workflows</li>
+            <li><strong>ML:</strong> scikit-learn, cuML, XGBoost · HMMs (hmmlearn, pomegranate) · statsmodels · GARCH-family volatility models</li>
+            <li><strong>Infra:</strong> Docker (PostgreSQL, Dagster, MLflow)</li>
+            <li><strong>Reporting:</strong> Plotly · Streamlit · HTML/CSS/JavaScript research reports</li>
+            <li><strong>Deployment:</strong> Joblib, FastAPI</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Deployed ML Pipeline on VPS</h3>
+            <span class="project-tag">Live deployment</span>
+          </div>
+          <p class="project-oneline">
+            ML trading pipeline on Contabo VPS with MetaTrader 5—research-to-ops complement to the lab above.
+          </p>
+          <ul>
+            <li><strong>Stack:</strong> Python · MQL5 · VPS (Contabo)</li>
+            <li><strong>Pipeline:</strong> live tick ingestion, feature computation, model inference loop and MT5 execution bridge</li>
+            <li><strong>Monitoring:</strong> structured JSON logs, guardrails, error handling and runtime checks</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Implied Volatility Surface</h3>
+            <span class="project-tag">Options pricing</span>
+          </div>
+          <p class="project-oneline">
+            Built an implied volatility surface from Yahoo Finance options data using the Black-Scholes model.
+          </p>
+          <ul>
+            <li><strong>Methods:</strong> Black-Scholes pricing · implied volatility inversion · volatility surface construction</li>
+            <li><strong>Extensions:</strong> SVI/SSVI parameterization · Heston model calibration</li>
+            <li><strong>Data:</strong> yfinance · risk-free rate · dividends</li>
+          </ul>
+
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Inflation Dashboard</h3>
+            <span class="project-tag">Study</span>
+          </div>
+          <p class="project-oneline">
+            Tableau dashboard study on inflation indicators, CPI, money supply aggregates and limitations of simple macroeconomic relationships.
+          </p>
+          <ul>
+            <li><strong>Stack:</strong> Tableau · SQL</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Other Projects</h3>
+          </div>
+          <p class="project-oneline">
+            Additional projects, including OpenClassrooms projects, are available on my website and GitHub.
+          </p>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="paginate-screen.js"></script>
+</body>
+</html>

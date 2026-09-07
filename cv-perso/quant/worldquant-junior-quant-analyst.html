@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Junior Quantitative Analyst — WorldQuant</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/layout-two-col.css">
+  <link rel="stylesheet" href="../../cv/screen-a4.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-narrow-sidebar.css">
+</head>
+<body class="cv-preview-pending">
+  <div class="cv-screen-preview" aria-hidden="true"></div>
+  <main class="cv-page cv--two-col cv-print-source">
+    <aside class="cv-sidebar">
+      <header class="cv-header">
+        <h1>Théo Charron</h1>
+        <p class="cv-title">Junior Quantitative Analyst</p>
+        <div class="cv-meta">
+          <span class="cv-meta-item cv-meta-item--location">France · Open to Austin relocation</span>
+          <span class="cv-meta-item cv-meta-item--graduate">Graduate · Available immediately</span>
+          <span class="cv-meta-item cv-meta-item--contract">Full-time</span>
+        </div>
+        <ul class="cv-links">
+          <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+          <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+          <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+          <li><a href="https://khonen.com">khonen.com</a></li>
+        </ul>
+      </header>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <dl class="skills-stack">
+          <div class="skill-row">
+            <dt>Quantitative Research</dt>
+            <dd>financial time series · feature engineering · experimental design · CPCV · walk-forward testing · backtesting · volatility modeling</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Machine Learning &amp; Statistics</dt>
+            <dd>classification · regression · tree ensembles · XGBoost · HMMs · GARCH-family models · hypothesis testing · model validation</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Programming &amp; Data</dt>
+            <dd>Python · SQL · NumPy · pandas · Polars · SciPy · scikit-learn · statsmodels · PostgreSQL</dd>
+          </div>
+          <div class="skill-row">
+            <dt>Research Engineering</dt>
+            <dd>Dagster · MLflow · pytest · CUDA/RAPIDS · Linux · Bash · Git · Docker · profiling</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <p class="compact">
+          <strong>Bachelor-level Diploma in Data Analysis</strong><br>
+          OpenClassrooms, France — RNCP Level 6<br>
+          <span class="edu-detail">Jul 2024 – Sep 2025</span>
+        </p>
+      </section>
+
+      <section id="languages">
+        <h2>Languages</h2>
+        <p class="compact">French — Native · English — Professional working proficiency</p>
+      </section>
+    </aside>
+
+    <div class="cv-main">
+      <section id="summary">
+        <h2>Summary</h2>
+        <p class="summary">
+          Junior quantitative analyst candidate focused on financial machine learning, time-series
+          experimentation and scalable research workflows. Built a Python platform for inspecting FX
+          tick data, designing events and features, conducting leakage-aware experiments, evaluating
+          complete pipelines out of sample and orchestrating parameterized workflows with Dagster.
+        </p>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Financial Machine Learning Research Lab</h3>
+            <span class="project-tag">Features · experiments · DAGs</span>
+          </div>
+          <p class="project-oneline">
+            Reproducible financial ML experimentation platform for intraday FX tick data, initially
+            inspired by Marcos López de Prado’s <em>Advances in Financial Machine Learning</em>.
+          </p>
+          <ul>
+            <li>Built reproducible pipelines for inspecting, validating and transforming multi-pair FX datasets containing tens of millions of ticks into event-, feature- and model-ready datasets.</li>
+            <li>Designed sampling, labeling and feature workflows around volatility dynamics, regime changes, structural price behavior and information-driven bars.</li>
+            <li>Evaluated complete modeling pipelines out of sample using purging, embargo and combinatorial purged cross-validation.</li>
+            <li>Built benchmark workflows spanning statistical baselines, tree ensembles, XGBoost, HMM regime models and GARCH-family volatility forecasts.</li>
+            <li>Orchestrated parameterized data, feature, labeling and model workflows with Dagster, while versioning configurations, metrics and artifacts through MLflow and Git.</li>
+            <li>Benchmarked CPU and GPU execution, using CUDA, cuML and GPU-enabled XGBoost for model training while retaining CPU paths when cuDF/CuPy transfer or memory overhead outweighed acceleration gains.</li>
+            <li>Developed unit, integration, performance and end-to-end tests across data-processing, feature, labeling, validation and model workflows.</li>
+            <li>Built Streamlit and Plotly tools for event-level inspection of market data, labels, features and model predictions.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Options Volatility Modeling</h3>
+            <span class="project-tag">Calibration</span>
+          </div>
+          <p class="project-oneline">
+            Built a reproducible options-volatility pipeline covering market-data cleaning, Black–Scholes
+            pricing and Greeks, implied-volatility inversion, SVI/SSVI surface calibration and Heston
+            calibration against listed-options data.
+          </p>
+        </article>
+
+        <article class="project">
+          <div class="project-head">
+            <h3>Live Market Data and Execution Pipeline</h3>
+            <span class="project-tag">Research-to-production</span>
+          </div>
+          <p class="project-oneline">
+            Demo-account pipeline connecting live market data, model inference and MetaTrader 5 execution
+            to validate research-to-production integration.
+          </p>
+          <ul>
+            <li>Integrated live tick retrieval and order execution through the MetaTrader 5 Python API, with Python-side feature computation, Joblib model loading and runtime guardrails.</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+  <script src="../../cv/paginate-screen.js"></script>
+</body>
+</html>

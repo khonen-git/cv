@@ -1,0 +1,357 @@
+/* Shared typography & components */
+:root {
+  --text: #1a1a1a;
+  --muted: #444;
+  --accent: #0d47a1;
+  --rule: #c8c8c8;
+  --sidebar-bg: #f4f6f9;
+  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+  --size: 11pt;
+  --line: 1.38;
+  --page-w: 210mm;
+  --page-h: 297mm;
+  --page-pad-x: 8mm;
+  --page-pad-y: 7mm;
+  --icon-github: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.53-.49-.55-.88-1.3-1.11-1.3-1.11-1.07-.73.08-.72.08-.72 1.19.08 1.81 1.22 1.81 1.22 1.05 1.8 2.76 1.28 3.43.98.11-.76.41-1.28.74-1.58-2.61-.3-5.36-1.31-5.36-5.82 0-1.29.46-2.34 1.22-3.16-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.21a11.5 11.5 0 0 1 3-.4c1.02 0 2.05.14 3 .4 2.29-1.53 3.28-1.21 3.28-1.21.65 1.65.24 2.87.12 3.17.76.82 1.22 1.87 1.22 3.16 0 4.52-2.76 5.51-5.39 5.81.42.36.8 1.08.8 2.18 0 1.57-.01 2.84-.01 3.22 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z'/%3E%3C/svg%3E");
+  --icon-pin: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M8 0a5 5 0 0 0-5 5c0 3.52 5 11 5 11s5-7.48 5-11a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E");
+  --icon-graduate: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M8 1 0 5l8 4 8-4-8-4zm0 6.5L2 4.5v4l6 3 6-3v-4L8 7.5zM2 12.5V9.7l6 3 6-3v2.8l-6 3-6-3z'/%3E%3C/svg%3E");
+  --icon-globe: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm6.92 7H12.3a10.5 10.5 0 0 0-.59-2.36 6.5 6.5 0 0 0 1.88-.78A6.96 6.96 0 0 1 14.92 7zM8 14.5c-.73-1.06-1.5-2.96-1.66-5.5h3.32c-.16 2.54-.93 4.44-1.66 5.5zM5.34 9c.16 2.54.93 4.44 1.66 5.5.73-1.06 1.5-2.96 1.66-5.5H5.34zM4.01 7c.16-2.54.93-4.44 1.66-5.5C6.4 2.56 7.17 4.46 7.33 7H4.01zm3.97-5.5c.73 1.06 1.5 2.96 1.66 5.5H6.98C7.14 4.46 7.91 2.56 8.64 1.5zM11.67 7c-.16-2.54-.93-4.44-1.66-5.5.73 1.06 1.5 2.96 1.66 5.5h0zM10.71 4.86a6.5 6.5 0 0 0-1.88-.78A10.5 10.5 0 0 0 9.24 7h2.33a6.96 6.96 0 0 1-.86-2.14zM3.08 7a6.96 6.96 0 0 1 .86-2.14 6.5 6.5 0 0 0 1.88.78A10.5 10.5 0 0 0 6.76 7H3.08z'/%3E%3C/svg%3E");
+  --icon-briefcase: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23000' d='M12 4h-1V3a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v1H4a2 2 0 0 0-2 2v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a2 2 0 0 0-2-2zM7 3h2v1H7V3zm-2 3h10v6H4V6z'/%3E%3C/svg%3E");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--size);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: var(--line);
+  color: var(--text);
+  background: #d8d8d8;
+}
+
+/* Screen-only: switch between layouts */
+.preview-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  background: #2b2b2b;
+  font-size: 0.85rem;
+}
+
+.preview-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.2rem 0.65rem;
+  border-radius: 3px;
+}
+
+.preview-nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.preview-nav a[aria-current="page"] {
+  background: var(--accent);
+}
+
+/* Header */
+.cv-header h1 {
+  margin: 0 0 0.2rem;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.cv-title {
+  margin: 0 0 0.4rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1.25;
+}
+
+.cv-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.45rem;
+  font-size: 0.94rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.cv-meta .sep::before {
+  content: "·";
+  margin-right: 0.45rem;
+  color: var(--rule);
+}
+
+.cv-meta-item {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.35em;
+}
+
+.cv-meta-item::before {
+  content: "";
+  flex: 0 0 0.88em;
+  width: 0.88em;
+  height: 0.88em;
+  margin-top: 0.14em;
+  background-color: var(--muted);
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.cv-meta-item--location::before {
+  -webkit-mask-image: var(--icon-pin);
+  mask-image: var(--icon-pin);
+}
+
+.cv-meta-item--graduate::before {
+  -webkit-mask-image: var(--icon-graduate);
+  mask-image: var(--icon-graduate);
+}
+
+.cv-meta-item--mobility::before {
+  -webkit-mask-image: var(--icon-globe);
+  mask-image: var(--icon-globe);
+}
+
+.cv-meta-item--contract::before {
+  -webkit-mask-image: var(--icon-briefcase);
+  mask-image: var(--icon-briefcase);
+}
+
+.cv-links {
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cv-links li {
+  margin-bottom: 0.15rem;
+}
+
+.cv-links li:last-child {
+  margin-bottom: 0;
+}
+
+.cv-links a {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 0.3em;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.94rem;
+  word-break: break-all;
+}
+
+.cv-links a::before {
+  flex: 0 0 auto;
+  min-width: 1.05em;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.86em;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.cv-links a[href^="mailto:"]::before {
+  content: "✉";
+  font-weight: 400;
+  font-size: 0.92em;
+}
+
+.cv-links a[href*="github"]::before {
+  content: "";
+  min-width: 0.95em;
+  width: 0.95em;
+  height: 0.95em;
+  margin-top: 0.1em;
+  background-color: var(--muted);
+  font-size: unset;
+  font-weight: unset;
+  letter-spacing: unset;
+  text-align: unset;
+  -webkit-mask-image: var(--icon-github);
+  mask-image: var(--icon-github);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.cv-links a[href*="linkedin"]::before {
+  content: "in";
+  font-size: 0.76em;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.cv-links a[href^="http"]:not([href*="github"]):not([href*="linkedin"])::before {
+  content: "↗";
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.cv-links a:hover {
+  text-decoration: underline;
+}
+
+/* Sections */
+section {
+  margin-bottom: 0.7rem;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.18rem;
+}
+
+p {
+  margin: 0 0 0.35rem;
+}
+
+.summary {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Projects */
+.project {
+  margin-bottom: 0.55rem;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.5rem;
+  margin-bottom: 0.15rem;
+}
+
+.project-head h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.project-tag {
+  font-size: 0.88rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.project-oneline {
+  margin: 0 0 0.22rem;
+  font-size: 0.97rem;
+}
+
+.project ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.project li {
+  margin-bottom: 0.1rem;
+}
+
+.project li:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills — single-column grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0.22rem 0.55rem;
+  font-size: 0.97rem;
+}
+
+.skills-grid dt {
+  margin: 0;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.skills-grid dd {
+  margin: 0;
+}
+
+/* Skills — sidebar stacked list */
+.skills-stack .skill-row {
+  margin-bottom: 0.45rem;
+}
+
+.skills-stack .skill-row:last-child {
+  margin-bottom: 0;
+}
+
+.skills-stack dt {
+  margin: 0 0 0.08rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.skills-stack dd {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.32;
+}
+
+.edu-line {
+  margin: 0;
+}
+
+.edu-detail {
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.compact {
+  margin: 0 0 0.3rem;
+  font-size: 0.97rem;
+}
+
+.compact:last-child {
+  margin-bottom: 0;
+}

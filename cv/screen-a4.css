@@ -1,0 +1,90 @@
+/* Screen preview — fixed A4 pages stacked (LibreOffice-style) */
+
+@media screen {
+  body.cv-preview-pending .cv-print-source {
+    position: fixed;
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  body.has-screen-preview {
+    padding: 1.5rem 1rem 2rem;
+    background: #8e8e8e;
+  }
+
+  body.has-screen-preview .cv-print-source {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--page-w);
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .cv-screen-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  .cv-sheet {
+    position: relative;
+    width: var(--page-w);
+    height: var(--page-h);
+    flex: 0 0 var(--page-h);
+    overflow: hidden;
+    background: #fff;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 6px 18px rgba(0, 0, 0, 0.18);
+  }
+
+  /* Sidebar chrome on the sheet itself — always full A4 height in preview */
+  .cv-sheet--two-col {
+    background: linear-gradient(to right, var(--sidebar-bg) var(--sidebar-w, 68mm), #fff var(--sidebar-w, 68mm));
+  }
+
+  .cv-sheet--two-col::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--sidebar-w, 68mm);
+    border-right: 1px solid var(--rule);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .cv-sheet__inner {
+    position: relative;
+    z-index: 1;
+    width: var(--page-w);
+  }
+
+  .cv-sheet__inner .cv-page {
+    width: var(--page-w);
+    min-height: var(--page-h);
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .cv-sheet__inner .cv-page::before {
+    display: none;
+  }
+
+  /* Single-page preview without pagination script */
+  body:not(.has-screen-preview) .cv-page {
+    width: var(--page-w);
+    height: var(--page-h);
+    min-height: unset;
+    max-height: var(--page-h);
+    overflow: hidden;
+  }
+}
