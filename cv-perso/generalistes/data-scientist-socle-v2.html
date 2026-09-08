@@ -164,20 +164,21 @@
 
       <section class="research-block">
         <h2 class="page-heading">Selected ML &amp; Statistical Research</h2>
-        <p class="page-lede">Démarche cohérente : états latents → dynamique des transitions → prédictibilité → falsification d’artefacts → validité conditionnelle des événements.</p>
+        <p class="page-lede">Démarche : régimes multi-horizons → prédictibilité → débruitage HMM → durée de vie de l’information après événement. Plusieurs conclusions négatives ou non exploitables — volontairement.</p>
 
         <div class="research-grid">
           <article class="research-card">
             <div class="card-head">
-              <h3>01 — Latent regime dynamics &amp; competing risks</h3>
-              <span class="project-tag">HMM · filtrage causal · hazards</span>
+              <h3>01 — Dual-horizon regimes &amp; competing outcomes</h3>
+              <span class="project-tag">HMM · competing risks · OOS</span>
             </div>
-            <p class="rq"><strong>Question</strong><br>Comment évoluent les transitions entre régimes courts lorsqu’un régime long reste actif ?</p>
+            <p class="rq"><strong>Question</strong><br>Quand le régime court se neutre alors que le régime long reste directionnel, que se passe-t-il ensuite ?</p>
             <div class="rm">
               <strong>Méthodes</strong>
               <ul>
-                <li>HMM multi-horizons, freeze post-calibration, filtrage causal OOS.</li>
-                <li>Sojourn times vs durée géométrique ; soft-fade ; competing risks / cause-specific hazards.</li>
+                <li>Deux HMM sur des périodes / horizons différents ; états −1 / 0 / +1 (baissier / neutre / haussier) ; filtrage causal OOS.</li>
+                <li>Trigger (cas haussier) : HMM fast 1→0 alors que HMM slow = 1 — symétrique au baissier.</li>
+                <li>Trois issues concurrentes : Resolve (fast 0→1, slow inchangé), Escalate (fast 0→−1, slow inchangé), Break (slow change avant que fast ne se décide).</li>
               </ul>
             </div>
             <div class="finding-block">
@@ -196,68 +197,68 @@
                   <span class="stat-label">Break</span>
                 </div>
               </div>
-              <p class="rf-note">Asymétrie soft-fade stable IS/OOS ; hazards non constants — escalation tôt, résolutions davantage vers ~9–12 bars.</p>
+              <p class="rf-note">Probabilités empiriques OOS après le trigger. L’escalade (inversion du court-terme) domine nettement la résolution dans le sens du régime long.</p>
             </div>
           </article>
 
           <article class="research-card">
             <div class="card-head">
               <h3>02 — Predictability of market regimes</h3>
-              <span class="project-tag">RF · XGBoost · évaluation conditionnelle</span>
+              <span class="project-tag">RF · XGBoost · event conditioning</span>
             </div>
-            <p class="rq"><strong>Question</strong><br>Dans quelle mesure des régimes / labels latents sont-ils prédictibles OOS à partir du contexte ?</p>
+            <p class="rq"><strong>Question</strong><br>Peut-on prédire le régime à l’instant T (labels d’amplitude) de façon exploitable OOS — globalement et conditionnellement à des events ?</p>
             <div class="rm">
               <strong>Méthodes</strong>
               <ul>
-                <li>RF / XGBoost vs baselines ; validation temporelle purged / walk-forward.</li>
-                <li>AUC, calibration, ablations ; évaluation globale vs conditionnée aux event samples.</li>
+                <li>Labellisation de régimes par amplitudes ; RF / XGBoost vs baselines ; validation temporelle purged / walk-forward.</li>
+                <li>Évaluation globale vs conditionnée à des events hétérogènes (breaks microstructure, expansion / compression de volatilité, crosses, etc.).</li>
               </ul>
             </div>
             <div class="finding-block">
               <span class="rf-label">Finding</span>
               <div class="metric-line">
-                <span><strong>Global :</strong> ROC-AUC ≈ 0.70–0.80 selon configurations</span>
-                <span><strong>Conditionnel :</strong> forte dégradation → proche du hasard sur certains sous-ensembles</span>
+                <span><strong>Global :</strong> ROC-AUC ≈ 0.70–0.80 — signal informatif, souvent sur la fin de régime</span>
+                <span><strong>Conditionnel events :</strong> dégradation nette → proche du hasard</span>
               </div>
-              <p class="rf-note">Un signal globalement informatif n’est pas forcément informatif là où l’on voudrait l’utiliser.</p>
+              <p class="rf-note">Signal statistiquement présent, mais peu d’edge : la fin de régime n’est pas toujours actionnable, et là où l’on conditionne aux events l’avantage disparaît.</p>
             </div>
           </article>
 
           <article class="research-card">
             <div class="card-head">
-              <h3>03 — Signal filtering, persistence &amp; null models</h3>
-              <span class="project-tag">Filtres roulants · permutation · falsification</span>
+              <h3>03 — HMM denoising &amp; state persistence</h3>
+              <span class="project-tag">HMM · Z-scores · transitions</span>
             </div>
-            <p class="rq"><strong>Question</strong><br>La persistance observée sur des signaux filtrés est-elle une propriété du marché ou un artefact du preprocessing ?</p>
+            <p class="rq"><strong>Question</strong><br>Un lissage HMM de signaux dérivés fait-il apparaître une persistance / des transitions exploitables ?</p>
             <div class="rm">
               <strong>Méthodes</strong>
               <ul>
-                <li>Z-scores / signaux roulants ; null models par permutation / bootstrap.</li>
-                <li>Isolation de la contribution mécanique des fenêtres vs structure informative.</li>
+                <li>HMM pour débruiter Z-scores et dérivés (médiane de Z-score, position dans le range high–low, etc.).</li>
+                <li>Analyse de la persistance d’états et des transitions markoviennes.</li>
               </ul>
             </div>
             <div class="finding-block">
               <span class="rf-label">Finding</span>
-              <p class="rf-note" style="margin-top: 0.3rem;">Une part importante de la persistance apparente peut être reproduite mécaniquement par la transformation roulante — y compris sur données sans structure. Conclusion négative plus utile qu’un score isolé.</p>
+              <p class="rf-note" style="margin-top: 0.3rem;">Persistance et structure markovienne bien visibles — assez d’information statistique, pas d’edge trading direct. Piste : utiliser ces états comme condition d’événement plutôt que comme signal autonome.</p>
             </div>
           </article>
 
           <article class="research-card">
             <div class="card-head">
-              <h3>04 — Event validity &amp; conditional effects</h3>
-              <span class="project-tag">Event sampling · matched nulls · first-passage</span>
+              <h3>04 — Information lifetime after events</h3>
+              <span class="project-tag">Survie · event sampling · exploratory</span>
             </div>
-            <p class="rq"><strong>Question</strong><br>Un événement apparemment significatif apporte-t-il de l’information au-delà de son contexte pré-événement ?</p>
+            <p class="rq"><strong>Question</strong><br>Après un événement de marché, combien de temps l’information reste-t-elle détectable avant de « mourir » ?</p>
             <div class="rm">
               <strong>Méthodes</strong>
               <ul>
-                <li>Conditioning, matched nulls, bootstrap / permutation, ablations.</li>
-                <li>First-passage / survie : objectif avant retour à la moyenne ; conditioning sur la survie.</li>
+                <li>Petite expérience de survie / first-passage après event sampling.</li>
+                <li>Modélisation de la durée de vie de l’effet (lois de type survie ; forme exponentielle / Poisson envisagée).</li>
               </ul>
             </div>
             <div class="finding-block">
               <span class="rf-label">Finding</span>
-              <p class="rf-note" style="margin-top: 0.3rem;">Plusieurs effets initialement marqués se réduisent nettement après contrôle des variables pré-event — séparer <em>event effect</em> et <em>context effect</em>.</p>
+              <p class="rf-note" style="margin-top: 0.3rem;">Pas de résultats prometteurs pour un edge. Démarche utile : formaliser la disparition de l’information comme un processus de survie plutôt qu’un score ponctuel.</p>
             </div>
           </article>
         </div>
