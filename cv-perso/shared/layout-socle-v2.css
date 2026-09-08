@@ -1,0 +1,473 @@
+/* CV socle v2 — 2 pages (profile / projects+research) */
+
+.resume {
+  --sidebar-w: 58mm;
+  --page-pad: 8mm;
+  --card-border: #d5dbe3;
+  --finding-bg: #eef2f7;
+}
+
+/* ——— Screen: feuilles A4 empilées ——— */
+@media screen {
+  body.cv-multipage {
+    margin: 0;
+    padding: 1.5rem 1rem 2rem;
+    background: #8e8e8e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  body.cv-multipage .resume {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+  }
+
+  body.cv-multipage .cv-page {
+    width: var(--page-w);
+    height: var(--page-h);
+    min-height: var(--page-h);
+    max-height: var(--page-h);
+    overflow: hidden;
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.12),
+      0 6px 18px rgba(0, 0, 0, 0.18);
+    background: #fff;
+  }
+}
+
+/* ——— Page shell ——— */
+.cv-page {
+  box-sizing: border-box;
+  width: var(--page-w);
+  height: var(--page-h);
+  position: relative;
+}
+
+.page-heading {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.15rem;
+}
+
+.page-lede {
+  margin: 0 0 0.5rem;
+  font-size: 0.84rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* ========== PAGE 1 — Profile ========== */
+.page-profile {
+  display: grid;
+  grid-template-columns: var(--sidebar-w) 1fr;
+  background: linear-gradient(
+    to right,
+    var(--sidebar-bg) var(--sidebar-w),
+    #fff var(--sidebar-w)
+  );
+}
+
+.page-profile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--sidebar-w);
+  border-right: 1px solid var(--rule);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-profile .cv-sidebar,
+.page-profile .cv-main {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.page-profile .cv-sidebar {
+  padding: var(--page-pad-y) 4mm var(--page-pad-y) var(--page-pad-x);
+}
+
+.page-profile .cv-main {
+  padding: var(--page-pad-y) var(--page-pad-x) var(--page-pad-y) 5.5mm;
+}
+
+.page-profile .cv-header h1 {
+  font-size: 1.7rem;
+  margin-bottom: 0.15rem;
+}
+
+.page-profile .cv-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.15rem;
+}
+
+.page-profile .cv-subtitle {
+  margin: 0 0 0.55rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.page-profile .cv-sidebar h2 {
+  font-size: 0.74rem;
+}
+
+.page-profile .cv-sidebar .compact {
+  font-size: 0.84rem;
+  margin-bottom: 0.35rem;
+}
+
+.page-profile .cv-sidebar .cv-links a {
+  font-size: 0.8rem;
+}
+
+.page-profile .core-skills .skill-row {
+  margin-bottom: 0.34rem;
+}
+
+.page-profile .core-skills dt {
+  font-size: 0.7rem;
+  margin-bottom: 0.04rem;
+}
+
+.page-profile .core-skills dd {
+  font-size: 0.78rem;
+  line-height: 1.3;
+}
+
+.page-profile .summary {
+  font-size: 0.97rem;
+  line-height: 1.42;
+  margin-bottom: 0.55rem;
+}
+
+.page-profile .project-oneline {
+  font-size: 0.94rem;
+  line-height: 1.38;
+  margin-bottom: 0.35rem;
+}
+
+.page-profile .project li {
+  margin-bottom: 0.28rem;
+  line-height: 1.36;
+  font-size: 0.92rem;
+}
+
+.page-profile .project-head {
+  margin-bottom: 0.22rem;
+}
+
+.page-profile .project-head h3 {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.page-profile .project-head .project-tag {
+  font-size: 0.8rem;
+}
+
+.page-profile .project-head a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-profile .project-head a:hover {
+  text-decoration: underline;
+}
+
+.page-profile .ml-projects > h2 {
+  margin-bottom: 0.55rem;
+}
+
+/* Soft skills (sidebar) */
+.page-profile .soft-skills {
+  margin-bottom: 0.35rem;
+}
+
+.page-profile .soft-skills-list {
+  margin: 0;
+  padding-left: 0.95rem;
+  columns: 1;
+}
+
+.page-profile .soft-skills-list li {
+  margin-bottom: 0.2rem;
+  font-size: 0.78rem;
+  line-height: 1.28;
+}
+
+/* ML projects block (page 1) — same article level for all */
+.page-profile .ml-projects .project {
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.page-profile .ml-projects .project:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+/* ========== PAGE 2 — Projects + Research ========== */
+.page-projects-research {
+  padding: var(--page-pad-y) var(--page-pad-x);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.secondary-projects {
+  margin-bottom: 0.55rem;
+  flex: 0 0 auto;
+}
+
+.secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3.2mm;
+}
+
+.secondary-grid--4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.secondary-card {
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 2.6mm 3mm;
+  min-height: 0;
+}
+
+.secondary-card h3 {
+  margin: 0 0 0.1rem;
+  font-size: 0.86rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.secondary-card .project-tag {
+  display: block;
+  margin-bottom: 0.18rem;
+  font-size: 0.72rem;
+}
+
+.secondary-card p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.secondary-card a {
+  color: var(--accent);
+}
+
+.research-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2mm;
+  flex: 1;
+  min-height: 0;
+}
+
+.research-card {
+  border: 1px solid var(--card-border);
+  border-radius: 3px;
+  padding: 3mm 3.2mm;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  min-height: 0;
+}
+
+.research-card .card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.15rem 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.research-card h3 {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.22;
+}
+
+.research-card .project-tag {
+  font-size: 0.72rem;
+}
+
+.research-card .rq,
+.research-card .rm {
+  margin: 0 0 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.28;
+}
+
+.research-card .rq strong,
+.research-card .rm strong,
+.research-card .rf-label {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.research-card .rm ul {
+  margin: 0.1rem 0 0;
+  padding-left: 1rem;
+}
+
+.research-card .rm li {
+  margin-bottom: 0.08rem;
+  font-size: 0.78rem;
+  line-height: 1.28;
+}
+
+.research-card .finding-block {
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.28rem;
+  margin: 0.18rem 0 0.25rem;
+}
+
+.stat-pill {
+  flex: 1 1 auto;
+  min-width: 3.8rem;
+  text-align: center;
+  padding: 0.2rem 0.28rem;
+  background: var(--finding-bg);
+  border-radius: 2px;
+  border: 1px solid #dde3ec;
+}
+
+.stat-pill .stat-value {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.15;
+}
+
+.stat-pill .stat-label {
+  display: block;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  margin-top: 0.05rem;
+}
+
+.metric-line {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin: 0.18rem 0 0.25rem;
+  font-size: 0.78rem;
+  line-height: 1.28;
+}
+
+.metric-line span {
+  padding: 0.18rem 0.32rem;
+  background: var(--finding-bg);
+  border-radius: 2px;
+  border: 1px solid #dde3ec;
+}
+
+.metric-line strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.research-card .rf-note {
+  margin: 0;
+  font-size: 0.76rem;
+  line-height: 1.28;
+  color: var(--text);
+}
+
+/* ========== Print ========== */
+@media print {
+  body.cv-multipage {
+    padding: 0;
+    background: #fff;
+    display: block;
+  }
+
+  body.cv-multipage .resume {
+    display: block;
+    gap: 0;
+  }
+
+  .resume .cv-page {
+    width: 100%;
+    height: var(--page-h) !important;
+    min-height: var(--page-h) !important;
+    max-height: var(--page-h);
+    overflow: hidden;
+    box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+    break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .resume .cv-page:last-child {
+    break-after: auto;
+    page-break-after: auto;
+  }
+
+  .page-profile {
+    display: grid !important;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    padding: 0 !important;
+    background: linear-gradient(
+      to right,
+      var(--sidebar-bg) var(--sidebar-w),
+      #fff var(--sidebar-w)
+    ) !important;
+  }
+
+  .page-profile .cv-sidebar {
+    width: auto;
+    flex: unset;
+    background: transparent;
+    border-right: none;
+    padding: var(--page-pad-y) 4mm var(--page-pad-y) var(--page-pad-x);
+  }
+
+  .page-projects-research {
+    padding: var(--page-pad-y) var(--page-pad-x) !important;
+  }
+}
