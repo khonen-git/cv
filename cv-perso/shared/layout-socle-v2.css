@@ -215,10 +215,21 @@
   border-bottom: 1px solid var(--rule);
 }
 
-.page-profile .ml-projects .project:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
+.page-profile .ml-projects .project:last-of-type {
+  margin-bottom: 0.55rem;
+}
+
+.page-profile .project-wip {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  color: var(--muted);
+  padding-top: 0.15rem;
+}
+
+.page-profile .project-wip strong {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 /* ========== PAGE 2 — Projects + Research ========== */

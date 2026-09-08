@@ -41,7 +41,7 @@
             </div>
             <div class="skill-row">
               <dt>Machine Learning &amp; Deep Learning</dt>
-              <dd>scikit-learn · PyTorch · XGBoost · Random Forest · classification · regression · clustering · deep learning · hyperparameter tuning · calibration</dd>
+              <dd>scikit-learn (sklearn) · PyTorch · XGBoost · Random Forest · classification · regression · clustering · deep learning · hyperparameter tuning · calibration</dd>
             </div>
             <div class="skill-row">
               <dt>Statistics &amp; Time Series</dt>
@@ -64,7 +64,7 @@
             <li>Rigueur expérimentale (OOS, falsification)</li>
             <li>Autonomie sur projets longs</li>
             <li>Clarté de restitution (communication des résultats et non résultats)</li>
-            <li>Curiosité technique orientée preuve</li>
+            <li>Esprit critique et priorisation des pistes</li>
           </ul>
         </section>
 
@@ -78,7 +78,7 @@
         <header class="cv-header">
           <h1>Théo Charron</h1>
           <p class="cv-title">Data Scientist — Machine Learning</p>
-          <p class="cv-subtitle">Time Series · Applied ML · Research Engineering</p>
+          <p class="cv-subtitle">Applied ML · Time Series · Research Engineering</p>
         </header>
 
         <section>
@@ -98,9 +98,11 @@
             <ul>
               <li>Ingestion, validation et transformation sur plusieurs dizaines de millions d’observations (ticks) jusqu’à des datasets prêts pour la modélisation.</li>
               <li>Architecture modulaire features / labels / models pilotée par Hydra (YAML composables) ; orchestration Dagster ; tracking MLflow ; PostgreSQL.</li>
-              <li>~955 tests automatisés (unitaires, intégration, performance, E2E) sur le framework public.</li>
-              <li>Comparaison CPU / GPU (CUDA, cuML, XGBoost GPU) avec profiling performance / mémoire.</li>
+              <li>~955 tests automatisés (unitaires, intégration, performance, E2E)</li>
+              <li>Comparaison CPU / GPU (ex: sklearn, cuML) avec profiling performance / mémoire.</li>
               <li>Exploration et inférence : Streamlit / Plotly, FastAPI, Joblib — pipeline live de démo ingestion → features → modèles → inférence → exécution broker.</li>
+              <li>Support des expériences research : régimes multi-horizons, conditioning d’events, validation purged / walk-forward.</li>
+              <li>Boucle complète expérimentation → tracking → comparaison de configurations pour départager signal global vs signal conditionnel.</li>
             </ul>
           </article>
 
@@ -109,26 +111,28 @@
               <h3>Détection de faux billets</h3>
               <span class="project-tag">OC P12 · classification · QDA · XGBoost</span>
             </div>
-            <p class="project-oneline">Projet OpenClassrooms de classification pour détecter des billets contrefaits à partir de variables géométriques.</p>
+            <p class="project-oneline">Classification binaire ONCFM : détecter les contrefaçons d’euros à partir de 6 dimensions géométriques (1 500 billets, 1 000 vrais / 500 faux).</p>
             <ul>
-              <li>Exploration et préparation des données (nettoyage, analyse descriptive, gestion des déséquilibres éventuels).</li>
-              <li>Baselines sklearn (régression logistique, KNN, Random Forest), QDA et XGBoost ; comparaison de métriques (précision, recall, F1) et choix de modèle.</li>
-              <li>Évaluation et restitution claire des performances pour une décision opérationnelle.</li>
+              <li>Imputation de 37 NA (`margin_low`) par régression linéaire ; comparaison logistique, KNN, Random Forest, XGBoost, QDA (et K-means).</li>
+              <li>Accuracy test ≈ 99 % sur les modèles retenus ; QDA industrialisé (joblib) pour l’inférence sur fichiers de production.</li>
+              <li>Focus opérationnel : matrices de confusion / seuils pour maximiser la détection des faux.</li>
             </ul>
           </article>
 
           <article class="project">
             <div class="project-head">
-              <h3>Étude de marché</h3>
-              <span class="project-tag">OC P11 · stats · ML</span>
+              <h3>Étude de marché — export volaille</h3>
+              <span class="project-tag">OC P11 · ACP · clustering</span>
             </div>
-            <p class="project-oneline">Projet OpenClassrooms d’étude de marché pour produire des insights décisionnels à partir de données clients / produits.</p>
+            <p class="project-oneline">Segmentation de 125 pays (≈ 62 % de la population mondiale, FAO 2017) pour prioriser des cibles d’export de volaille.</p>
             <ul>
-              <li>Analyses statistiques et tests pour cadrer le problème et valider les hypothèses métier.</li>
-              <li>Modèles ML (segmentation / prédiction) pour prioriser les segments ou leviers les plus pertinents.</li>
-              <li>Restitution orientée décision : synthèses actionnables plutôt que score isolé.</li>
+              <li>10+ indicateurs (disponibilité, imports/exports, stabilité politique, etc.) ; standardisation + ACP (4 axes ≈ 78 % de variance).</li>
+              <li>K-means / CAH (k=6) : identification de clusters à fort potentiel d’import (ex. Europe du N-O / Golfe) vs marchés peu prioritaires.</li>
+              <li>Restitution orientée décision : groupements actionnables plutôt que score isolé.</li>
             </ul>
           </article>
+
+          <p class="project-wip"><strong>En cours —</strong> Modélisation de microstructure de marché via deep learning (PyTorch) : architectures séquentielles / représentation d’order book, validation OOS.</p>
         </section>
       </div>
     </section>
@@ -136,8 +140,8 @@
     <!-- ========== PAGE 2 — BI / Web + Research ========== -->
     <section class="cv-page page-projects-research" aria-label="Page 2 — Projets et research">
       <section class="secondary-projects">
-        <h2 class="page-heading">Analytics, BI, Quant &amp; Web</h2>
-        <p class="page-lede">Projets OpenClassrooms et personnels — restitution métier, modélisation quantitative et produits web.</p>
+        <h2 class="page-heading">BI, modélisation &amp; web</h2>
+        <p class="page-lede">Dashboards, calibration quantitative et portfolio web.</p>
         <div class="secondary-grid secondary-grid--4">
           <article class="secondary-card">
             <h3>Dashboard Power BI — avancement projets</h3>
@@ -164,7 +168,7 @@
 
       <section class="research-block">
         <h2 class="page-heading">Selected ML &amp; Statistical Research</h2>
-        <p class="page-lede">Démarche : régimes multi-horizons → prédictibilité → débruitage HMM → durée de vie de l’information après événement. Plusieurs conclusions négatives ou non exploitables — volontairement.</p>
+        <p class="page-lede">Quatre lignes d’expérimentation sur régimes, prédictibilité et dynamique d’événements : formaliser une question, calibrer une validation hors échantillon, puis mesurer ce qui reste informatif une fois le contexte et les artefacts contrôlés. L’objectif n’est pas d’accumuler des scores, mais de séparer structure statistique et usage réellement actionnable.</p>
 
         <div class="research-grid">
           <article class="research-card">
@@ -176,9 +180,8 @@
             <div class="rm">
               <strong>Méthodes</strong>
               <ul>
-                <li>Deux HMM sur des périodes / horizons différents ; états −1 / 0 / +1 (baissier / neutre / haussier) ; filtrage causal OOS.</li>
-                <li>Trigger (cas haussier) : HMM fast 1→0 alors que HMM slow = 1 — symétrique au baissier.</li>
-                <li>Trois issues concurrentes : Resolve (fast 0→1, slow inchangé), Escalate (fast 0→−1, slow inchangé), Break (slow change avant que fast ne se décide).</li>
+                <li>Deux HMM (horizons différents), états −1 / 0 / +1 ; filtrage causal OOS.</li>
+                <li>Après pause du régime court (fast 1→0, slow encore directionnel) : trois issues exclusives — reprise du sens long (Resolve), inversion court-terme (Escalate), ou rupture du régime long d’abord (Break). Symétrique haussier / baissier.</li>
               </ul>
             </div>
             <div class="finding-block">
@@ -197,7 +200,7 @@
                   <span class="stat-label">Break</span>
                 </div>
               </div>
-              <p class="rf-note">Probabilités empiriques OOS après le trigger. L’escalade (inversion du court-terme) domine nettement la résolution dans le sens du régime long.</p>
+              <p class="rf-note">Après la pause, l’inversion court-terme domine nettement la reprise dans le sens du régime long ; la rupture du long est rare (~4 %).</p>
             </div>
           </article>
 
@@ -246,19 +249,19 @@
           <article class="research-card">
             <div class="card-head">
               <h3>04 — Information lifetime after events</h3>
-              <span class="project-tag">Survie · event sampling · exploratory</span>
+              <span class="project-tag">Survie · event sampling · hazard</span>
             </div>
-            <p class="rq"><strong>Question</strong><br>Après un événement de marché, combien de temps l’information reste-t-elle détectable avant de « mourir » ?</p>
+            <p class="rq"><strong>Question</strong><br>Après un événement, selon quelle loi l’information se dissipe-t-elle — et à quel horizon cesse-t-elle d’être détectable ?</p>
             <div class="rm">
               <strong>Méthodes</strong>
               <ul>
-                <li>Petite expérience de survie / first-passage après event sampling.</li>
-                <li>Modélisation de la durée de vie de l’effet (lois de type survie ; forme exponentielle / Poisson envisagée).</li>
+                <li>Event sampling puis analyse de survie / first-passage sur la durée de vie de l’effet.</li>
+                <li>Calibration de lois de type hazard (forme exponentielle / processus de Poisson) pour décrire la décroissance.</li>
               </ul>
             </div>
             <div class="finding-block">
               <span class="rf-label">Finding</span>
-              <p class="rf-note" style="margin-top: 0.3rem;">Pas de résultats prometteurs pour un edge. Démarche utile : formaliser la disparition de l’information comme un processus de survie plutôt qu’un score ponctuel.</p>
+              <p class="rf-note" style="margin-top: 0.3rem;">Cadre prometteur pour traiter un effet comme un processus temporel plutôt qu’un score ponctuel ; sur ce setup, pas encore d’edge stable — la valeur est surtout méthodologique (horizon utile, queue de survie).</p>
             </div>
           </article>
         </div>
