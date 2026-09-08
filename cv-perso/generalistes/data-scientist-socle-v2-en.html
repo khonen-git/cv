@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Data Scientist — Machine Learning (v2 EN)</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-socle-v2.css">
+</head>
+<body class="cv-multipage">
+  <main class="resume">
+
+    <!-- ========== PAGE 1 — Profile + ML projects ========== -->
+    <section class="cv-page page-profile" aria-label="Page 1 — Profile">
+      <aside class="cv-sidebar">
+        <section>
+          <h2>Contact</h2>
+          <ul class="cv-links">
+            <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+            <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+            <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+            <li><a href="https://khonen.com">khonen.com</a></li>
+          </ul>
+          <p class="compact" style="margin-top: 0.45rem;"><span class="cv-meta-item cv-meta-item--location">France · International · Relocation</span></p>
+          <p class="compact"><strong>Availability:</strong> immediate.</p>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <p class="compact"><strong>Data Analyst Diploma</strong><br>OpenClassrooms — RNCP Level 6<br><span class="edu-detail">Jul. 2024 – Sep. 2025</span></p>
+          <p class="compact"><strong>Data Scientist — Machine Learning</strong><br>OpenClassrooms — RNCP Level 7<br><span class="edu-detail">Seeking host company · 18-month apprenticeship</span></p>
+        </section>
+
+        <section class="core-skills">
+          <h2>Core skills</h2>
+          <dl class="skills-stack">
+            <div class="skill-row">
+              <dt>Python &amp; Data</dt>
+              <dd>Python · SQL · NumPy · pandas · Polars · PostgreSQL · feature engineering · Jupyter notebook</dd>
+            </div>
+            <div class="skill-row">
+              <dt>Machine Learning &amp; Deep Learning</dt>
+              <dd>scikit-learn (sklearn) · PyTorch · XGBoost · Random Forest · classification · regression · clustering · deep learning · hyperparameter tuning · calibration</dd>
+            </div>
+            <div class="skill-row">
+              <dt>Statistics &amp; Time Series</dt>
+              <dd>statistical analysis · hypothesis testing · bootstrap · OOS / walk-forward validation · time series · HMM · GARCH</dd>
+            </div>
+            <div class="skill-row">
+              <dt>ML Engineering / MLOps</dt>
+              <dd>Hydra · Dagster · MLflow · FastAPI · Docker · Git · Linux · model deployment</dd>
+            </div>
+            <div class="skill-row">
+              <dt>Visualization &amp; BI</dt>
+              <dd>Plotly · Streamlit · Matplotlib · Power BI · Tableau · data visualization</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section class="soft-skills">
+          <h2>Soft skills</h2>
+          <ul class="soft-skills-list">
+            <li>Experimental rigor (OOS, falsification)</li>
+            <li>Autonomy on long-running projects</li>
+            <li>Clear reporting (results and non-results)</li>
+            <li>Critical thinking and prioritization</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Languages</h2>
+          <p class="compact">French (native) · English (professional).</p>
+        </section>
+      </aside>
+
+      <div class="cv-main">
+        <header class="cv-header">
+          <h1>Théo Charron</h1>
+          <p class="cv-title">Data Scientist — Machine Learning</p>
+          <p class="cv-subtitle">Applied ML · Time Series · Research Engineering</p>
+        </header>
+
+        <section>
+          <h2>Profile</h2>
+          <p class="summary">Data Analyst graduate working on applied ML and research engineering projects. Seeking an <strong>18-month Data Scientist / Machine Learning apprenticeship</strong> — open to a permanent or fixed-term role if aligned. Used to industrializing experimentation rather than prototyping in isolated notebooks: OOS validation, pipeline orchestration, tests, versioning, experiment tracking, production deployment.</p>
+        </section>
+
+        <section class="ml-projects">
+          <h2>Machine Learning Projects</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Financial Time-Series ML Research Laboratory</a></h3>
+              <span class="project-tag">End-to-end pipelines · experimentation · reproducibility</span>
+            </div>
+            <p class="project-oneline">Modular Python laboratory for reproducible experimentation on high-frequency market data — from raw ingestion to evaluated models ready for deployment.</p>
+            <ul>
+              <li>Ingestion, validation and transformation over tens of millions of observations (ticks) into modeling-ready datasets.</li>
+              <li>Modular features / labels / models architecture driven by Hydra (composable YAML); Dagster orchestration; MLflow tracking; PostgreSQL.</li>
+              <li>~955 automated tests (unit, integration, performance, E2E)</li>
+              <li>CPU / GPU comparison (e.g. sklearn, cuML) with performance / memory profiling.</li>
+              <li>Exploration and inference: Streamlit / Plotly, FastAPI, Joblib — live demo pipeline ingestion → features → models → inference → broker execution.</li>
+              <li>Research experiment support: multi-horizon regimes, event conditioning, purged / walk-forward validation.</li>
+              <li>Full loop experimentation → tracking → configuration comparison to separate global vs conditional signal.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Counterfeit banknote detection</h3>
+              <span class="project-tag">classification · QDA · XGBoost</span>
+            </div>
+            <p class="project-oneline">Binary classification for ONCFM: detect euro counterfeits from 6 geometric dimensions (1,500 notes, 1,000 genuine / 500 fake).</p>
+            <ul>
+              <li>Imputation of 37 missing values (`margin_low`) via linear regression; comparison of logistic regression, KNN, Random Forest, XGBoost, QDA (and K-means).</li>
+              <li>Test accuracy ≈ 99% on selected models; QDA productionized (joblib) for inference on production files.</li>
+              <li>Operational focus: confusion matrices / thresholds to maximize fake detection.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="project-head">
+              <h3>Market study — poultry export</h3>
+              <span class="project-tag">PCA · clustering</span>
+            </div>
+            <p class="project-oneline">Segmentation of 125 countries (≈ 62% of world population, FAO 2017) to prioritize poultry export targets.</p>
+            <ul>
+              <li>10+ indicators (availability, imports/exports, political stability, etc.); standardization + PCA (4 components ≈ 78% variance).</li>
+              <li>K-means / hierarchical clustering (k=6): clusters with high import potential (e.g. NW Europe / Gulf) vs lower-priority markets.</li>
+              <li>Decision-oriented delivery: actionable groupings rather than an isolated score.</li>
+            </ul>
+          </article>
+
+          <p class="project-wip"><strong>In progress —</strong> Market microstructure modeling with deep learning (PyTorch): sequential architectures / order-book representation, OOS validation.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- ========== PAGE 2 — BI / Web + Research ========== -->
+    <section class="cv-page page-projects-research" aria-label="Page 2 — Projects and research">
+      <section class="secondary-projects">
+        <h2 class="page-heading">BI, modeling &amp; web</h2>
+        <p class="page-lede">Dashboards, quantitative calibration, and web portfolio.</p>
+        <div class="secondary-grid secondary-grid--4">
+          <article class="secondary-card">
+            <h3>Power BI dashboard — project progress</h3>
+            <span class="project-tag">Power BI · storytelling</span>
+            <p>Dynamic dashboard to track project progress: data model, measures, and business reporting.</p>
+          </article>
+          <article class="secondary-card">
+            <h3>Inflation study — Tableau</h3>
+            <span class="project-tag">Tableau · inflation study</span>
+            <p>Tableau analysis and dashboard on inflation (personal topic): indicators, visual narrative, and analytical delivery.</p>
+          </article>
+          <article class="secondary-card">
+            <h3>Implied Volatility Surface</h3>
+            <span class="project-tag">Options · SVI / SSVI / Heston</span>
+            <p>Market → IV → SVI/SSVI/Heston calibration pipeline; Streamlit / Plotly app. <a href="https://github.com/khonen-git/ImpliedVolatilitySurface">repo</a></p>
+          </article>
+          <article class="secondary-card">
+            <h3>Personal site — khonen.com</h3>
+            <span class="project-tag">Next.js 15 · MDX · TypeScript</span>
+            <p>Portfolio / knowledge base: Next.js, MDX, Tailwind, Plotly viz; Jest and Playwright (~29 e2e). <a href="https://khonen.com">khonen.com</a> · <a href="https://github.com/khonen-git/siteperso">repo</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section class="research-block">
+        <h2 class="page-heading">Selected ML &amp; Statistical Research</h2>
+        <p class="page-lede">Four lines of experimentation on regimes, predictability, and event dynamics: frame a question, set up out-of-sample validation, then measure what remains informative once context and artefacts are controlled. The goal is not to accumulate scores, but to separate statistical structure from genuinely actionable use.</p>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <div class="card-head">
+              <h3>01 — Dual-horizon regimes &amp; competing outcomes</h3>
+              <span class="project-tag">HMM · competing risks · OOS</span>
+            </div>
+            <p class="rq"><strong>Question</strong><br>When the short-horizon regime turns neutral while the long-horizon regime stays directional, what happens next?</p>
+            <div class="rm">
+              <strong>Methods</strong>
+              <ul>
+                <li>Two HMMs (different horizons), states −1 / 0 / +1; causal OOS filtering.</li>
+                <li>After a short-regime pause (fast 1→0, slow still directional): three mutually exclusive outcomes — resume long direction (Resolve), short-term flip (Escalate), or long-regime break first (Break). Symmetric bull / bear.</li>
+              </ul>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Finding</span>
+              <div class="stat-row">
+                <div class="stat-pill">
+                  <span class="stat-value">~28%</span>
+                  <span class="stat-label">Resolve</span>
+                </div>
+                <div class="stat-pill">
+                  <span class="stat-value">~68%</span>
+                  <span class="stat-label">Escalate</span>
+                </div>
+                <div class="stat-pill">
+                  <span class="stat-value">~4%</span>
+                  <span class="stat-label">Break</span>
+                </div>
+              </div>
+              <p class="rf-note">After the pause, short-term flips dominate resumes in the long-regime direction; long-regime breaks are rare (~4%).</p>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-head">
+              <h3>02 — Predictability of market regimes</h3>
+              <span class="project-tag">RF · XGBoost · event conditioning</span>
+            </div>
+            <p class="rq"><strong>Question</strong><br>Can amplitude-based regime labels at time T be predicted exploitably OOS — globally and conditional on events?</p>
+            <div class="rm">
+              <strong>Methods</strong>
+              <ul>
+                <li>Amplitude-based regime labeling; RF / XGBoost vs baselines; purged / walk-forward temporal validation.</li>
+                <li>Global evaluation vs conditioning on heterogeneous events (microstructure breaks, volatility expansion / compression, crosses, etc.).</li>
+              </ul>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Finding</span>
+              <div class="metric-line">
+                <span><strong>Global:</strong> ROC-AUC ≈ 0.70–0.80 — informative signal, often on regime endings</span>
+                <span><strong>Event-conditional:</strong> sharp degradation → near chance</span>
+              </div>
+              <p class="rf-note">Statistically present signal, but little edge: regime endings are not always actionable, and conditional on events the advantage disappears.</p>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-head">
+              <h3>03 — HMM denoising &amp; state persistence</h3>
+              <span class="project-tag">HMM · Z-scores · transitions</span>
+            </div>
+            <p class="rq"><strong>Question</strong><br>Does HMM smoothing of derived signals reveal usable persistence / state transitions?</p>
+            <div class="rm">
+              <strong>Methods</strong>
+              <ul>
+                <li>HMM denoising of Z-scores and derivatives (median Z-score, position in high–low range, etc.).</li>
+                <li>Analysis of state persistence and Markovian transitions.</li>
+              </ul>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Finding</span>
+              <p class="rf-note" style="margin-top: 0.3rem;">Clear persistence and Markovian structure — enough statistical information, no direct trading edge. Lead: use these states as event conditions rather than a standalone signal.</p>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-head">
+              <h3>04 — Information lifetime after events</h3>
+              <span class="project-tag">Survival · event sampling · hazard</span>
+            </div>
+            <p class="rq"><strong>Question</strong><br>After an event, under what law does information decay — and at what horizon does it stop being detectable?</p>
+            <div class="rm">
+              <strong>Methods</strong>
+              <ul>
+                <li>Event sampling then survival / first-passage analysis on effect lifetime.</li>
+                <li>Calibration of hazard-type laws (exponential / Poisson-process form) to describe decay.</li>
+              </ul>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Finding</span>
+              <p class="rf-note" style="margin-top: 0.3rem;">Promising frame for treating an effect as a temporal process rather than a point score; on this setup, no stable edge yet — value is mainly methodological (useful horizon, survival law).</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+  </main>
+</body>
+</html>
