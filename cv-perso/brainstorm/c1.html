@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV C1 — Court (1 page)</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-socle-v2.css">
+  <link rel="stylesheet" href="brainstorm.css">
+</head>
+<body class="cv-multipage">
+  <nav class="bs-nav" aria-label="Versions">
+    <a href="index.html">Index</a><span class="sep">|</span>
+    <a href="a1.html">A1</a>
+    <a href="a2.html">A2</a>
+    <a href="b1.html">B1</a>
+    <a href="b2.html">B2</a>
+    <a href="c1.html" aria-current="page">C1</a>
+    <a href="c2.html">C2</a>
+    <a href="h1.html">H1</a>
+    <a href="h2.html">H2</a>
+  </nav>
+
+  <main class="resume">
+    <section class="cv-page page-profile bs-dense" aria-label="Page unique">
+      <aside class="cv-sidebar">
+        <section>
+          <h2>Contact</h2>
+          <ul class="cv-links">
+            <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+            <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+            <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+            <li><a href="https://khonen.com">khonen.com</a></li>
+          </ul>
+          <p class="compact" style="margin-top:0.45rem;"><span class="cv-meta-item cv-meta-item--location">France · International</span></p>
+          <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
+        </section>
+
+        <section>
+          <h2>Formation</h2>
+          <p class="compact"><strong>Diplôme Data Analyst</strong><br>OpenClassrooms — RNCP 6<br><span class="edu-detail">2024 – 2025</span></p>
+          <p class="compact"><strong>Data Scientist — ML</strong><br>OpenClassrooms — RNCP 7<br><span class="edu-detail">Alternance 18 mois</span></p>
+        </section>
+
+        <section class="core-skills">
+          <h2>Compétences</h2>
+          <dl class="skills-stack">
+            <div class="skill-row"><dt>Data</dt><dd>Python · SQL · pandas · NumPy · Polars · PostgreSQL</dd></div>
+            <div class="skill-row"><dt>ML</dt><dd>scikit-learn · XGBoost · PyTorch · Random Forest</dd></div>
+            <div class="skill-row"><dt>Stats</dt><dd>séries temporelles · validation OOS · HMM</dd></div>
+            <div class="skill-row"><dt>MLOps</dt><dd>Docker · MLflow · FastAPI · Git · Linux</dd></div>
+            <div class="skill-row"><dt>BI</dt><dd>Power BI · Tableau · Streamlit · Plotly</dd></div>
+          </dl>
+        </section>
+
+        <section class="soft-skills">
+          <h2>Soft skills</h2>
+          <ul class="soft-skills-list">
+            <li>Autonomie</li>
+            <li>Rigueur</li>
+            <li>Clarté de restitution</li>
+            <li>Esprit critique</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Langues</h2>
+          <p class="compact">Français (natif) · Anglais (pro).</p>
+        </section>
+      </aside>
+
+      <div class="cv-main">
+        <header class="cv-header">
+          <h1>Théo Charron</h1>
+          <p class="cv-title">Data Scientist — Machine Learning</p>
+          <p class="cv-subtitle">Alternance 18 mois · Disponible immédiatement</p>
+        </header>
+
+        <section>
+          <h2>Profil</h2>
+          <p class="summary">Data Scientist junior : ML appliqué, séries temporelles, industrialisation. Labo personnel à grande échelle (<strong>dizaines de millions d’obs.</strong>, <strong>~950 tests</strong>, pipelines, API). <strong>Alternance Data Scientist Machine Learning — 18 mois.</strong></p>
+        </section>
+
+        <section class="ml-projects">
+          <h2>Projets</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Labo ML séries temporelles</a></h3>
+              <span class="project-tag">~950 tests · API</span>
+            </div>
+            <p class="project-oneline">Pipelines reproductibles haute fréquence : ingestion → modèles OOS → démo live (Hydra, Dagster, MLflow, FastAPI).</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Prédiction de régimes (ML)</h3>
+              <span class="project-tag">AUC ≈ 0,70–0,80</span>
+            </div>
+            <p class="project-oneline">Signal OOS global ; effondrement sous conditionnement aux events.</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Régimes double horizon</h3>
+              <span class="project-tag">68 % / 28 % / 4 %</span>
+            </div>
+            <p class="project-oneline">Issues après pause du régime court quantifiées hors échantillon.</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Détection de faux billets</h3>
+              <span class="project-tag">≈ 99 %</span>
+            </div>
+            <p class="project-oneline">Classification industrialisée sur 1&nbsp;500 billets.</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Segmentation export · Power BI · Tableau · Vol implicite · HMM · Survie post-événement</h3>
+            </div>
+            <p class="project-oneline">125 pays / 6 clusters · dashboards métier · calibration options · persistance d’états · horizon d’information.</p>
+          </article>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

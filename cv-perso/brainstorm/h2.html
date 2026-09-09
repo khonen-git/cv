@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV H2 — Hybride (2 pages)</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-socle-v2.css">
+  <link rel="stylesheet" href="brainstorm.css">
+</head>
+<body class="cv-multipage">
+  <nav class="bs-nav" aria-label="Versions">
+    <a href="index.html">Index</a><span class="sep">|</span>
+    <a href="a1.html">A1</a>
+    <a href="a2.html">A2</a>
+    <a href="b1.html">B1</a>
+    <a href="b2.html">B2</a>
+    <a href="c1.html">C1</a>
+    <a href="c2.html">C2</a>
+    <a href="h1.html">H1</a>
+    <a href="h2.html" aria-current="page">H2</a>
+  </nav>
+
+  <main class="resume">
+    <section class="cv-page page-profile" aria-label="Page 1 — Profil">
+      <aside class="cv-sidebar">
+        <section>
+          <h2>Contact</h2>
+          <ul class="cv-links">
+            <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+            <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+            <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+            <li><a href="https://khonen.com">khonen.com</a></li>
+          </ul>
+          <p class="compact" style="margin-top:0.45rem;"><span class="cv-meta-item cv-meta-item--location">France · International</span></p>
+          <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
+        </section>
+
+        <section>
+          <h2>Formation</h2>
+          <p class="compact"><strong>Diplôme Data Analyst</strong><br>OpenClassrooms — RNCP niveau 6<br><span class="edu-detail">Juil. 2024 – Sept. 2025</span></p>
+          <p class="compact"><strong>Data Scientist — Machine Learning</strong><br>OpenClassrooms — RNCP niveau 7<br><span class="edu-detail">Alternance 18 mois recherchée</span></p>
+        </section>
+
+        <section class="core-skills">
+          <h2>Compétences</h2>
+          <dl class="skills-stack">
+            <div class="skill-row"><dt>Data</dt><dd>Python · SQL · NumPy · pandas · Polars · PostgreSQL</dd></div>
+            <div class="skill-row"><dt>Machine Learning</dt><dd>scikit-learn · XGBoost · PyTorch · Random Forest</dd></div>
+            <div class="skill-row"><dt>Stats &amp; séries temp.</dt><dd>statistiques · validation hors échantillon · HMM · GARCH</dd></div>
+            <div class="skill-row"><dt>MLOps</dt><dd>Docker · MLflow · FastAPI · Hydra · Dagster · Git · Linux</dd></div>
+            <div class="skill-row"><dt>BI &amp; viz</dt><dd>Power BI · Tableau · Streamlit · Plotly</dd></div>
+          </dl>
+        </section>
+
+        <section class="soft-skills">
+          <h2>Soft skills</h2>
+          <ul class="soft-skills-list">
+            <li>Autonomie sur projets longs</li>
+            <li>Rigueur et sens du détail</li>
+            <li>Communication claire des résultats</li>
+            <li>Esprit critique et priorisation</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Langues</h2>
+          <p class="compact">Français (natif) · Anglais (professionnel).</p>
+        </section>
+      </aside>
+
+      <div class="cv-main">
+        <header class="cv-header">
+          <h1>Théo Charron</h1>
+          <p class="cv-title">Data Scientist — Machine Learning</p>
+          <p class="cv-subtitle">Alternance 18 mois · ML appliqué · Séries temporelles</p>
+        </header>
+
+        <section>
+          <h2>Profil</h2>
+          <p class="summary">Diplômé Data Analyst, autonome et orienté résultat : je mène des projets ML de bout en bout, de l’expérimentation au déploiement, avec une restitution claire. Preuve principale : un labo de séries temporelles sur <strong>dizaines de millions d’observations</strong>, <strong>~950 tests</strong>, pipelines reproductibles et API. Je recherche une <strong>alternance Data Scientist Machine Learning (18 mois)</strong>.</p>
+        </section>
+
+        <section class="ml-projects">
+          <h2>Projets Machine Learning</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Labo ML séries temporelles — pipelines de bout en bout</a></h3>
+              <span class="project-tag">échelle · reproductibilité · déploiement</span>
+            </div>
+            <p class="project-oneline">Laboratoire Python sur données de marché haute fréquence : de l’ingestion brute aux modèles évalués, prêts pour le déploiement.</p>
+            <ul>
+              <li>Dizaines de millions d’observations (ticks) → datasets prêts modèle.</li>
+              <li>Architecture Hydra · orchestration Dagster · tracking MLflow · PostgreSQL.</li>
+              <li>~950 tests · FastAPI / Streamlit — démo live ingestion → inférence.</li>
+            </ul>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Prédiction de régimes de marché</h3>
+              <span class="project-tag">AUC ≈ 0,70–0,80</span>
+            </div>
+            <p class="project-oneline">RF / XGBoost, validation temporelle — signal OOS global ; limites documentées sous conditionnement aux events.</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Détection de faux billets</h3>
+              <span class="project-tag">≈ 99 %</span>
+            </div>
+            <p class="project-oneline">1&nbsp;500 billets, 6 dimensions — accuracy test ≈ 99&nbsp;% ; modèle industrialisé (joblib).</p>
+          </article>
+
+          <p class="project-wip"><strong>En cours —</strong> Modélisation microstructure via deep learning (PyTorch), validation hors échantillon.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="cv-page page-projects-research research-as-projects" aria-label="Page 2 — Projets">
+      <section class="secondary-projects">
+        <h2 class="page-heading">BI, calibration &amp; portfolio</h2>
+        <div class="secondary-grid secondary-grid--4">
+          <article class="secondary-card">
+            <h3>Dashboard Power BI — suivi de projets</h3>
+            <span class="project-tag">Power BI</span>
+            <p>Modèle de données, mesures et storytelling métier.</p>
+          </article>
+          <article class="secondary-card">
+            <h3>Dashboard inflation — Tableau</h3>
+            <span class="project-tag">Tableau</span>
+            <p>Analyse et narration visuelle (sujet libre).</p>
+          </article>
+          <article class="secondary-card">
+            <h3>Surface de volatilité implicite</h3>
+            <span class="project-tag">Options · Streamlit</span>
+            <p>Pipeline marché → IV → SVI/SSVI/Heston. <a href="https://github.com/khonen-git/ImpliedVolatilitySurface">repo</a></p>
+          </article>
+          <article class="secondary-card">
+            <h3>Segmentation pays — export</h3>
+            <span class="project-tag">125 pays · 6 clusters</span>
+            <p>ACP ≈ 78&nbsp;% variance — priorisation de cibles d’export.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="research-block">
+        <h2 class="page-heading">Projets de recherche appliquée</h2>
+        <p class="page-lede">Question claire, validation hors échantillon, résultat mesurable — y compris quand le signal ne se traduit pas en avantage actionnable.</p>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <div class="card-head">
+              <h3>Régimes double horizon — issues concurrentes</h3>
+              <span class="project-tag">HMM · OOS</span>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Résultat</span>
+              <div class="stat-row">
+                <div class="stat-pill"><span class="stat-value">~68%</span><span class="stat-label">Inversion</span></div>
+                <div class="stat-pill"><span class="stat-value">~28%</span><span class="stat-label">Reprise</span></div>
+                <div class="stat-pill"><span class="stat-value">~4%</span><span class="stat-label">Rupture</span></div>
+              </div>
+              <p class="rf-note">Après pause du régime court : l’inversion domine ; la rupture du long est rare.</p>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-head">
+              <h3>Débruitage de signaux par HMM</h3>
+              <span class="project-tag">persistance</span>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Résultat</span>
+              <p class="rf-note" style="margin-top:0.3rem;">Persistance d’états bien visible — plutôt condition d’événement qu’edge trading direct.</p>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-head">
+              <h3>Durée de vie de l’information après événement</h3>
+              <span class="project-tag">survie · hazard</span>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Résultat</span>
+              <p class="rf-note" style="margin-top:0.3rem;">Cadre pour traiter un effet comme un processus temporel (horizon utile).</p>
+            </div>
+          </article>
+
+          <article class="research-card">
+            <div class="card-head">
+              <h3>Site portfolio — khonen.com</h3>
+              <span class="project-tag">Next.js</span>
+            </div>
+            <div class="finding-block">
+              <span class="rf-label">Livrable</span>
+              <p class="rf-note" style="margin-top:0.3rem;">Portfolio / knowledge base · ~29 tests e2e. <a href="https://khonen.com">khonen.com</a></p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>

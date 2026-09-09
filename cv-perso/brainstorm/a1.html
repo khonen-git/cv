@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV A1 — Accroche chiffrée (1 page)</title>
+  <link rel="stylesheet" href="../../cv/base.css">
+  <link rel="stylesheet" href="../../cv/print.css" media="print">
+  <link rel="stylesheet" href="../shared/layout-socle-v2.css">
+  <link rel="stylesheet" href="brainstorm.css">
+</head>
+<body class="cv-multipage">
+  <nav class="bs-nav" aria-label="Versions">
+    <a href="index.html">Index</a><span class="sep">|</span>
+    <a href="a1.html" aria-current="page">A1</a>
+    <a href="a2.html">A2</a>
+    <a href="b1.html">B1</a>
+    <a href="b2.html">B2</a>
+    <a href="c1.html">C1</a>
+    <a href="c2.html">C2</a>
+    <a href="h1.html">H1</a>
+    <a href="h2.html">H2</a>
+  </nav>
+
+  <main class="resume">
+    <section class="cv-page page-profile bs-dense" aria-label="Page unique">
+      <aside class="cv-sidebar">
+        <section>
+          <h2>Contact</h2>
+          <ul class="cv-links">
+            <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
+            <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
+            <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
+            <li><a href="https://khonen.com">khonen.com</a></li>
+          </ul>
+          <p class="compact" style="margin-top:0.45rem;"><span class="cv-meta-item cv-meta-item--location">France · International</span></p>
+          <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
+        </section>
+
+        <section>
+          <h2>Formation</h2>
+          <p class="compact"><strong>Diplôme Data Analyst</strong><br>OpenClassrooms — RNCP niveau 6<br><span class="edu-detail">Juil. 2024 – Sept. 2025</span></p>
+          <p class="compact"><strong>Data Scientist — Machine Learning</strong><br>OpenClassrooms — RNCP niveau 7<br><span class="edu-detail">Alternance 18 mois recherchée</span></p>
+        </section>
+
+        <section class="core-skills">
+          <h2>Compétences</h2>
+          <dl class="skills-stack">
+            <div class="skill-row"><dt>Data</dt><dd>Python · SQL · NumPy · pandas · Polars · PostgreSQL</dd></div>
+            <div class="skill-row"><dt>Machine Learning</dt><dd>scikit-learn · XGBoost · PyTorch · Random Forest</dd></div>
+            <div class="skill-row"><dt>Stats &amp; séries temp.</dt><dd>statistiques · validation hors échantillon · HMM · GARCH</dd></div>
+            <div class="skill-row"><dt>MLOps</dt><dd>Docker · MLflow · FastAPI · Hydra · Dagster · Git · Linux</dd></div>
+            <div class="skill-row"><dt>BI &amp; viz</dt><dd>Power BI · Tableau · Streamlit · Plotly</dd></div>
+          </dl>
+        </section>
+
+        <section class="soft-skills">
+          <h2>Soft skills</h2>
+          <ul class="soft-skills-list">
+            <li>Autonomie sur projets longs</li>
+            <li>Rigueur et sens du détail</li>
+            <li>Communication claire des résultats</li>
+            <li>Esprit critique et priorisation</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Langues</h2>
+          <p class="compact">Français (natif) · Anglais (professionnel).</p>
+        </section>
+      </aside>
+
+      <div class="cv-main">
+        <header class="cv-header">
+          <h1>Théo Charron</h1>
+          <p class="cv-title">Data Scientist — Machine Learning</p>
+          <p class="cv-subtitle">Alternance 18 mois · ML appliqué · Séries temporelles</p>
+        </header>
+
+        <section>
+          <h2>Profil</h2>
+          <p class="summary">Data Analyst diplômé (RNCP 6), je construis des projets machine learning de bout en bout — de la donnée brute au modèle déployé. Preuve principale : un laboratoire de séries temporelles sur <strong>dizaines de millions d’observations</strong>, <strong>~950 tests</strong> automatisés, pipelines reproductibles et API de démo. Je recherche une <strong>alternance Data Scientist Machine Learning (18 mois)</strong> pour industrialiser ces méthodes sur des cas métier.</p>
+        </section>
+
+        <section class="ml-projects">
+          <h2>Projets</h2>
+
+          <article class="project">
+            <div class="project-head">
+              <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Labo ML séries temporelles — pipelines de bout en bout</a></h3>
+              <span class="project-tag">échelle · reproductibilité · déploiement</span>
+            </div>
+            <p class="project-oneline">Laboratoire Python pour expérimenter sur données de marché haute fréquence : ingestion → features / labels → modèles évalués hors échantillon → démo live.</p>
+            <ul>
+              <li>Dizaines de millions d’observations (ticks) transformées en datasets prêts modèle.</li>
+              <li>~950 tests · Hydra / Dagster / MLflow / PostgreSQL · FastAPI + Streamlit.</li>
+            </ul>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Prédiction de régimes de marché</h3>
+              <span class="project-tag">RF · XGBoost · OOS</span>
+            </div>
+            <p class="project-oneline">ROC-AUC hors échantillon ≈ <strong>0,70–0,80</strong> en global ; le signal s’effondre sous conditionnement aux events — limites documentées.</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Régimes double horizon</h3>
+              <span class="project-tag">HMM · ~68 % / 28 % / 4 %</span>
+            </div>
+            <p class="project-oneline">Après pause du régime court : ≈ <strong>68&nbsp;%</strong> inversion, <strong>28&nbsp;%</strong> reprise du long, <strong>4&nbsp;%</strong> rupture du long.</p>
+          </article>
+
+          <article class="project project--secondary">
+            <div class="project-head">
+              <h3>Détection de faux billets</h3>
+              <span class="project-tag">classification · ≈ 99 %</span>
+            </div>
+            <p class="project-oneline">1&nbsp;500 billets, 6 dimensions géométriques — accuracy test ≈ <strong>99&nbsp;%</strong>, modèle industrialisé (joblib).</p>
+          </article>
+
+          <article class="project-compact">
+            <h3>Autres projets</h3>
+            <p>Débruitage HMM · Durée de vie de l’information après événement · Surface de volatilité implicite · Dashboard Power BI · Segmentation export (125 pays) · Dashboard inflation (Tableau)</p>
+          </article>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
