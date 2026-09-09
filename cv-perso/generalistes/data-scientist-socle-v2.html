@@ -99,14 +99,13 @@
               <li>Ingestion, validation et transformation sur plusieurs dizaines de millions d’observations (ticks) jusqu’à des datasets prêts pour la modélisation.</li>
               <li>Architecture modulaire features / labels / models pilotée par Hydra (YAML composables) ; orchestration Dagster ; tracking MLflow ; PostgreSQL.</li>
               <li>~955 tests automatisés (unitaires, intégration, performance, E2E)</li>
-              <li>Comparaison CPU / GPU (ex: sklearn, cuML) avec profiling performance / mémoire.</li>
+              <li>Comparaison CPU / GPU (cuML, XGBoost GPU) avec profiling performance / mémoire.</li>
               <li>Exploration et inférence : Streamlit / Plotly, FastAPI, Joblib — pipeline live de démo ingestion → features → modèles → inférence → exécution broker.</li>
-              <li>Support des expériences research : régimes multi-horizons, conditioning d’events, validation purged / walk-forward.</li>
-              <li>Boucle complète expérimentation → tracking → comparaison de configurations pour départager signal global vs signal conditionnel.</li>
+              <li>Support research : régimes multi-horizons, conditioning d’events, validation purged / walk-forward ; tracking et comparaison de configs pour séparer signal global vs conditionnel.</li>
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project project--secondary">
             <div class="project-head">
               <h3>Détection de faux billets</h3>
               <span class="project-tag">classification · QDA · XGBoost</span>
@@ -114,21 +113,19 @@
             <p class="project-oneline">Classification binaire ONCFM : détecter les contrefaçons d’euros à partir de 6 dimensions géométriques (1 500 billets, 1 000 vrais / 500 faux).</p>
             <ul>
               <li>Imputation de 37 NA (`margin_low`) par régression linéaire ; comparaison logistique, KNN, Random Forest, XGBoost, QDA (et K-means).</li>
-              <li>Accuracy test ≈ 99 % sur les modèles retenus ; QDA industrialisé (joblib) pour l’inférence sur fichiers de production.</li>
-              <li>Focus opérationnel : matrices de confusion / seuils pour maximiser la détection des faux.</li>
+              <li>Accuracy test ≈ 99 % ; QDA industrialisé (joblib) ; matrices de confusion / seuils pour maximiser la détection des faux.</li>
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project project--secondary">
             <div class="project-head">
               <h3>Étude de marché — export volaille</h3>
               <span class="project-tag">ACP · clustering</span>
             </div>
             <p class="project-oneline">Segmentation de 125 pays (≈ 62 % de la population mondiale, FAO 2017) pour prioriser des cibles d’export de volaille.</p>
             <ul>
-              <li>10+ indicateurs (disponibilité, imports/exports, stabilité politique, etc.) ; standardisation + ACP (4 axes ≈ 78 % de variance).</li>
-              <li>K-means / CAH (k=6) : identification de clusters à fort potentiel d’import (ex. Europe du N-O / Golfe) vs marchés peu prioritaires.</li>
-              <li>Restitution orientée décision : groupements actionnables plutôt que score isolé.</li>
+              <li>10+ indicateurs ; standardisation + ACP (4 axes ≈ 78 % de variance) ; K-means / CAH (k=6).</li>
+              <li>Clusters à fort potentiel d’import (ex. Europe du N-O / Golfe) vs marchés peu prioritaires — restitution orientée décision.</li>
             </ul>
           </article>
 

@@ -99,14 +99,13 @@
               <li>Ingestion, validation and transformation over tens of millions of observations (ticks) into modeling-ready datasets.</li>
               <li>Modular features / labels / models architecture driven by Hydra (composable YAML); Dagster orchestration; MLflow tracking; PostgreSQL.</li>
               <li>~955 automated tests (unit, integration, performance, E2E)</li>
-              <li>CPU / GPU comparison (e.g. sklearn, cuML) with performance / memory profiling.</li>
+              <li>CPU / GPU comparison (cuML, XGBoost GPU) with performance / memory profiling.</li>
               <li>Exploration and inference: Streamlit / Plotly, FastAPI, Joblib — live demo pipeline ingestion → features → models → inference → broker execution.</li>
-              <li>Research experiment support: multi-horizon regimes, event conditioning, purged / walk-forward validation.</li>
-              <li>Full loop experimentation → tracking → configuration comparison to separate global vs conditional signal.</li>
+              <li>Research support: multi-horizon regimes, event conditioning, purged / walk-forward validation; tracking and config comparison to separate global vs conditional signal.</li>
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project project--secondary">
             <div class="project-head">
               <h3>Counterfeit banknote detection</h3>
               <span class="project-tag">classification · QDA · XGBoost</span>
@@ -114,21 +113,19 @@
             <p class="project-oneline">Binary classification for ONCFM: detect euro counterfeits from 6 geometric dimensions (1,500 notes, 1,000 genuine / 500 fake).</p>
             <ul>
               <li>Imputation of 37 missing values (`margin_low`) via linear regression; comparison of logistic regression, KNN, Random Forest, XGBoost, QDA (and K-means).</li>
-              <li>Test accuracy ≈ 99% on selected models; QDA productionized (joblib) for inference on production files.</li>
-              <li>Operational focus: confusion matrices / thresholds to maximize fake detection.</li>
+              <li>Test accuracy ≈ 99%; QDA productionized (joblib); confusion matrices / thresholds to maximize fake detection.</li>
             </ul>
           </article>
 
-          <article class="project">
+          <article class="project project--secondary">
             <div class="project-head">
               <h3>Market study — poultry export</h3>
               <span class="project-tag">PCA · clustering</span>
             </div>
             <p class="project-oneline">Segmentation of 125 countries (≈ 62% of world population, FAO 2017) to prioritize poultry export targets.</p>
             <ul>
-              <li>10+ indicators (availability, imports/exports, political stability, etc.); standardization + PCA (4 components ≈ 78% variance).</li>
-              <li>K-means / hierarchical clustering (k=6): clusters with high import potential (e.g. NW Europe / Gulf) vs lower-priority markets.</li>
-              <li>Decision-oriented delivery: actionable groupings rather than an isolated score.</li>
+              <li>10+ indicators; standardization + PCA (4 components ≈ 78% variance); K-means / hierarchical clustering (k=6).</li>
+              <li>High import-potential clusters (e.g. NW Europe / Gulf) vs lower-priority markets — decision-oriented delivery.</li>
             </ul>
           </article>
 
