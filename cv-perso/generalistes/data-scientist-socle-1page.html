@@ -86,7 +86,7 @@
 
         <section>
           <h2>Profil</h2>
-          <p class="summary">Data Analyst diplômé, je développe sur mon temps libre des projets Machine Learning et data engineering. Pièce maîtresse : un framework de recherche qui automatise l’industrialisation de bout en bout — du traitement des données aux modèles jusqu’au déploiement. Préférence nette pour les problématiques prédictives sur séries temporelles ; ouvert aux autres sujets Data Scientist. Je recherche une <strong>alternance Data Scientist — Machine Learning de 18&nbsp;mois</strong> pour mettre cette pratique au service d’une équipe.</p>
+          <p class="summary"><strong>Data Analyst diplômé</strong>, je développe sur mon temps libre des projets <strong>Machine Learning</strong> et <strong>data engineering</strong>. Pièce maîtresse : un <strong>framework de recherche</strong> qui automatise l’<strong>industrialisation de bout en bout</strong> — du traitement des données aux modèles jusqu’au déploiement. Préférence nette pour les <strong>problématiques prédictives sur séries temporelles</strong> ; ouvert aux autres sujets Data Scientist. Je recherche une <strong>alternance Data Scientist — Machine Learning de 18&nbsp;mois</strong> pour mettre cette pratique au service d’une équipe.</p>
         </section>
 
         <section class="ml-projects">
@@ -97,12 +97,14 @@
               <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Laboratoire ML — Séries temporelles haute fréquence</a></h3>
               <span class="project-tag">Python · scikit-learn · XGBoost · PyTorch · Dagster · MLflow</span>
             </div>
-            <p class="project-oneline">Plateforme Python modulaire de recherche ML sur séries temporelles exigeantes (données tick), couvrant le cycle complet ingestion → features → labels → modèles → évaluation → déploiement.</p>
+            <p class="project-oneline">Plateforme Python modulaire de recherche ML sur séries temporelles exigeantes (données tick), couvrant le cycle complet <strong>ingestion → features → labels → modèles → évaluation → déploiement</strong>.</p>
             <ul>
-              <li>Traitement de plusieurs dizaines de millions d’observations et génération de datasets prêts pour la modélisation.</li>
-              <li>Pipelines reproductibles Hydra / Dagster, avec suivi des paramètres, métriques et artefacts dans MLflow.</li>
-              <li>~950 tests automatisés et validation temporelle robuste : OOS, walk-forward, purging et contrôles de falsification.</li>
-              <li>Accélération du fit modèles (RF jusqu’à ≈&nbsp;40× vs 1 cœur ; XGBoost ≈&nbsp;2,9×) et démo live FastAPI / Streamlit.</li>
+              <li>Traitement de <strong>plusieurs dizaines de millions d’observations</strong> et génération de datasets prêts pour la modélisation.</li>
+              <li>Construction configurable via <strong>Hydra</strong> de <strong>features</strong> et <strong>labels multi-horizons</strong> (échantillonnage d’événements, bars) jusqu’à des datasets prêts pour la modélisation.</li>
+              <li><strong>Architecture modulaire</strong> features / labels / models ; pipelines reproductibles <strong>Dagster</strong> avec suivi des paramètres, métriques et artefacts dans <strong>MLflow</strong>.</li>
+              <li><strong>~950 tests automatisés</strong> et validation temporelle robuste : <strong>OOS</strong>, <strong>walk-forward</strong>, <strong>purging</strong> et contrôles de falsification.</li>
+              <li>Accélération du fit modèles (RF jusqu’à <strong>≈&nbsp;40×</strong> vs 1 cœur ; XGBoost <strong>≈&nbsp;2,9×</strong>) et démo live <strong>FastAPI</strong>.</li>
+              <li><strong>UI centralisée Streamlit</strong> / dashboards pour explorer données, expériences et résultats — branchée sur le pipeline d’inférence.</li>
             </ul>
           </article>
 
@@ -113,9 +115,9 @@
             </div>
             <p class="project-oneline">Étude de la détection, de la persistance et de la prédictibilité de régimes dans des séries temporelles.</p>
             <ul>
-              <li>Comparaison de modèles supervisés et HMM sous validation temporelle hors échantillon.</li>
-              <li>Signal mesurable sur certains labels de régime (ROC-AUC ≈&nbsp;0,70–0,80), puis analyse de sa dégradation selon le contexte événementiel.</li>
-              <li>Analyse des transitions d’états, de leur persistance et de la durée de vie de l’information.</li>
+              <li>Comparaison de modèles supervisés et <strong>HMM</strong> sous <strong>validation temporelle hors échantillon</strong>.</li>
+              <li>Signal mesurable sur certains labels de régime (<strong>ROC-AUC ≈&nbsp;0,70–0,80</strong>), puis analyse de sa dégradation selon le contexte événementiel.</li>
+              <li>Analyse des <strong>transitions d’états</strong>, de leur <strong>persistance</strong> et de la <strong>durée de vie de l’information</strong>.</li>
             </ul>
           </article>
 
@@ -124,7 +126,7 @@
               <h3>Détection de faux billets</h3>
               <span class="project-tag">Classification · QDA · XGBoost</span>
             </div>
-            <p class="project-oneline">Modélisation sur 1&nbsp;500 billets à partir de six caractéristiques géométriques, avec traitement des valeurs manquantes et comparaison de plusieurs classifieurs. ≈&nbsp;99&nbsp;% d’accuracy sur les modèles retenus ; sélection des seuils via matrices de confusion et modèle QDA packagé pour l’inférence.</p>
+            <p class="project-oneline">Modélisation sur <strong>1&nbsp;500 billets</strong> à partir de six caractéristiques géométriques, avec traitement des valeurs manquantes et comparaison de plusieurs classifieurs. <strong>≈&nbsp;99&nbsp;% d’accuracy</strong> sur les modèles retenus ; sélection des seuils via matrices de confusion et modèle <strong>QDA</strong> packagé pour l’inférence.</p>
           </article>
 
           <article class="project project--compact">
@@ -132,7 +134,18 @@
               <h3>Segmentation pays pour priorisation d’export</h3>
               <span class="project-tag">PCA · clustering</span>
             </div>
-            <p class="project-oneline">Analyse de 125 pays à partir de 10+ indicateurs économiques et commerciaux. PCA puis clustering K-means/CAH ; 4 composantes ≈&nbsp;78&nbsp;% de variance expliquée.</p>
+            <p class="project-oneline">Analyse de <strong>125 pays</strong> à partir de 10+ indicateurs économiques et commerciaux. <strong>PCA</strong> puis clustering <strong>K-means/CAH</strong> ; 4 composantes <strong>≈&nbsp;78&nbsp;% de variance expliquée</strong>.</p>
+          </article>
+
+          <article class="project project--compact">
+            <div class="project-head">
+              <h3>Dashboards BI — Power BI &amp; Tableau</h3>
+              <span class="project-tag">Power BI · Tableau · storytelling</span>
+            </div>
+            <ul>
+              <li><strong>Dashboard de suivi de projets</strong> (Power BI) — modèle de données, mesures DAX et reporting orienté décision.</li>
+              <li><strong>Dashboard d’analyse de l’inflation</strong> (Tableau) — indicateurs clés, narration visuelle et restitution claire pour un public non technique.</li>
+            </ul>
           </article>
         </section>
       </div>

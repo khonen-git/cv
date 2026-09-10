@@ -196,6 +196,12 @@
   color: var(--text);
 }
 
+.page-one .project li strong,
+.page-one .project-oneline strong {
+  font-weight: 650;
+  color: var(--text);
+}
+
 /* Projets : empilement fluide, air interne proportionnel, pas de trous */
 .page-one .ml-projects {
   flex: 1 1 auto;
