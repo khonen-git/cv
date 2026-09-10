@@ -18,10 +18,9 @@
           <ul class="cv-links">
             <li><a href="mailto:theocharron.pro@gmail.com">theocharron.pro@gmail.com</a></li>
             <li><a href="https://github.com/khonen-git">github.com/khonen-git</a></li>
-            <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
             <li><a href="https://khonen.com">khonen.com</a></li>
           </ul>
-          <p class="compact"><span class="cv-meta-item cv-meta-item--location">France · International · Relocation</span></p>
+          <p class="compact"><span class="cv-meta-item cv-meta-item--location">Mobilité France · Ouvert à l’international</span></p>
           <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
         </section>
 
@@ -50,7 +49,7 @@
             </div>
             <div class="skill-row">
               <dt>Environnement</dt>
-              <dd>Linux · Bash · Docker · VPS Contabo · Cursor · assistants GenAI</dd>
+              <dd>Linux · Bash · Docker · VPS · Cursor · assistants GenAI</dd>
             </div>
           </dl>
         </section>
@@ -65,7 +64,7 @@
           <p class="compact">
             <strong>Diplôme Data Analyst</strong><br>
             OpenClassrooms — RNCP niveau 6<br>
-            <span class="edu-detail">Juil. 2024 – Sept. 2025</span>
+            <span class="edu-detail">2024 – 2025</span>
           </p>
         </section>
 
@@ -109,9 +108,10 @@
             <ul>
               <li>Traitement de <strong>plusieurs dizaines de millions d’observations</strong> et génération de datasets prêts pour la modélisation.</li>
               <li>Construction configurable via <strong>Hydra</strong> de <strong>features</strong> et <strong>labels multi-horizons</strong> (échantillonnage d’événements, bars) jusqu’à des datasets prêts pour la modélisation.</li>
-              <li><strong>Architecture modulaire</strong> features / labels / models ; pipelines reproductibles <strong>Dagster</strong> avec suivi des paramètres, métriques et artefacts dans <strong>MLflow</strong>.</li>
+              <li><strong>Architecture modulaire</strong> ; pipelines reproductibles <strong>Dagster</strong> avec suivi des paramètres, métriques et artefacts dans <strong>MLflow</strong>.</li>
               <li><strong>~950 tests automatisés</strong> et validation temporelle robuste : <strong>OOS</strong>, <strong>walk-forward</strong>, <strong>purging</strong> et contrôles de falsification.</li>
-              <li>Accélération du fit modèles (RF jusqu’à <strong>≈&nbsp;40×</strong> vs 1 cœur ; XGBoost <strong>≈&nbsp;2,9×</strong>) et démo live <strong>FastAPI</strong>.</li>
+              <li>Accélération du fit modèles (RF jusqu’à <strong>≈&nbsp;40×</strong> vs 1 cœur ; XGBoost <strong>≈&nbsp;2,9×</strong>).</li>
+              <li>Déploiement sur <strong>VPS</strong> : API d’inférence <strong>FastAPI</strong> et démo live du pipeline.</li>
               <li><strong>UI centralisée Streamlit</strong> / dashboards pour explorer données, expériences et résultats — branchée sur le pipeline d’inférence.</li>
             </ul>
           </article>
@@ -134,7 +134,11 @@
               <h3>Détection de faux billets</h3>
               <span class="project-tag">Classification · QDA · XGBoost</span>
             </div>
-            <p class="project-oneline">Modélisation sur <strong>1&nbsp;500 billets</strong> à partir de six caractéristiques géométriques, avec traitement des valeurs manquantes et comparaison de plusieurs classifieurs. <strong>≈&nbsp;99&nbsp;% d’accuracy</strong> sur les modèles retenus ; sélection des seuils via matrices de confusion et modèle <strong>QDA</strong> packagé pour l’inférence.</p>
+            <p class="project-oneline">Classification sur <strong>1&nbsp;500 billets</strong> (6 caractéristiques géométriques) pour détecter les contrefaçons.</p>
+            <ul>
+              <li>Imputation des NA, comparaison de plusieurs classifieurs (logistique, RF, XGBoost, <strong>QDA</strong>…).</li>
+              <li><strong>≈&nbsp;99&nbsp;% d’accuracy</strong> ; seuils via matrices de confusion ; QDA packagé (<strong>joblib</strong>) pour l’inférence.</li>
+            </ul>
           </article>
 
           <article class="project project--compact">
@@ -142,17 +146,21 @@
               <h3>Segmentation pays pour priorisation d’export</h3>
               <span class="project-tag">PCA · clustering</span>
             </div>
-            <p class="project-oneline">Analyse de <strong>125 pays</strong> à partir de 10+ indicateurs économiques et commerciaux. <strong>PCA</strong> puis clustering <strong>K-means/CAH</strong> ; 4 composantes <strong>≈&nbsp;78&nbsp;% de variance expliquée</strong>.</p>
+            <p class="project-oneline">Segmentation de <strong>125 pays</strong> pour identifier des marchés d’export prioritaires.</p>
+            <ul>
+              <li><strong>PCA</strong> + clustering <strong>K-means/CAH</strong> sur 10+ indicateurs ; 4 composantes ≈&nbsp;<strong>78&nbsp;%</strong> de variance.</li>
+              <li>Clusters à fort potentiel d’import vs peu prioritaires — restitution orientée décision.</li>
+            </ul>
           </article>
 
           <article class="project project--compact">
             <div class="project-head">
               <h3>Dashboards BI — Power BI &amp; Tableau</h3>
-              <span class="project-tag">Power BI · Tableau · storytelling</span>
+              <span class="project-tag">Power BI · Tableau · DAX · storytelling</span>
             </div>
             <ul>
-              <li><strong>Dashboard de suivi de projets</strong> (Power BI) — modèle de données, mesures DAX et reporting orienté décision.</li>
-              <li><strong>Dashboard d’analyse de l’inflation</strong> (Tableau) — indicateurs clés, narration visuelle et restitution claire pour un public non technique.</li>
+              <li><strong>Suivi de projets</strong> (Power BI) — modèle de données, mesures <strong>DAX</strong>, reporting pour piloter l’avancement.</li>
+              <li><strong>Analyse de l’inflation</strong> (Tableau) — indicateurs clés et narration visuelle pour un public non technique.</li>
             </ul>
           </article>
         </section>
