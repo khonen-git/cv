@@ -21,7 +21,7 @@
             <li><a href="https://linkedin.com/in/tcharron">linkedin.com/in/tcharron</a></li>
             <li><a href="https://khonen.com">khonen.com</a></li>
           </ul>
-          <p class="compact" style="margin-top:0.35rem;"><span class="cv-meta-item cv-meta-item--location">France · International</span></p>
+          <p class="compact"><span class="cv-meta-item cv-meta-item--location">France · International · Relocation</span></p>
           <p class="compact"><strong>Disponibilité :</strong> immédiatement.</p>
         </section>
 
@@ -52,7 +52,7 @@
           <p class="compact">
             <strong>Data Scientist — Machine Learning</strong><br>
             OpenClassrooms — RNCP niveau 7<br>
-            <span class="edu-detail">Alternance 18 mois recherchée</span>
+            <span class="edu-detail">Parcours visé · Alternance 18 mois</span>
           </p>
           <p class="compact">
             <strong>Diplôme Data Analyst</strong><br>
@@ -64,9 +64,9 @@
         <section class="soft-skills">
           <h2>Soft skills</h2>
           <ul class="soft-skills-list">
-            <li><strong>Rigueur expérimentale</strong> — validation OOS, contrôles de falsification, ~950 tests</li>
+            <li><strong>Rigueur expérimentale</strong> — hypothèses testables, contrôles, reproductibilité</li>
             <li><strong>Autonomie</strong> — conception et développement d’un laboratoire ML end-to-end</li>
-            <li><strong>Esprit critique</strong> — limites et stabilité des signaux, pas uniquement des scores</li>
+            <li><strong>Esprit critique</strong> — limites et stabilité des modèles, pas uniquement des scores</li>
             <li><strong>Clarté de restitution</strong> — dashboards, visualisations et synthèse technique</li>
           </ul>
         </section>
@@ -81,12 +81,12 @@
         <header class="cv-header">
           <h1>Théo Charron</h1>
           <p class="cv-title">Data Scientist — Machine Learning</p>
-          <p class="cv-subtitle">Time Series · Applied ML · ML Engineering</p>
+          <p class="cv-subtitle">Applied ML · Séries temporelles · ML Engineering</p>
         </header>
 
         <section>
           <h2>Profil</h2>
-          <p class="summary">Data Analyst diplômé, spécialisé en Machine Learning et séries temporelles, avec des projets couvrant modélisation, validation hors échantillon et industrialisation ML. Je recherche une <strong>alternance Data Scientist / Machine Learning de 18 mois</strong>, avec un intérêt particulier pour les problématiques prédictives et l’expérimentation reproductible.</p>
+          <p class="summary">Data Analyst diplômé, je développe sur mon temps libre des projets Machine Learning et data engineering. Pièce maîtresse : un framework de recherche qui automatise l’industrialisation de bout en bout — du traitement des données aux modèles jusqu’au déploiement. Préférence nette pour les problématiques prédictives sur séries temporelles ; ouvert aux autres sujets Data Scientist. Je recherche une <strong>alternance Data Scientist — Machine Learning de 18&nbsp;mois</strong> pour mettre cette pratique au service d’une équipe.</p>
         </section>
 
         <section class="ml-projects">
@@ -94,15 +94,15 @@
 
           <article class="project project--flagship">
             <div class="project-head">
-              <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Laboratoire ML — Séries temporelles financières</a></h3>
+              <h3><a href="https://github.com/khonen-git/FinancialMLResearchLab">Laboratoire ML — Séries temporelles haute fréquence</a></h3>
               <span class="project-tag">Python · scikit-learn · XGBoost · PyTorch · Dagster · MLflow</span>
             </div>
-            <p class="project-oneline">Plateforme Python modulaire de recherche ML sur données de marché haute fréquence, couvrant le cycle complet ingestion → features → labels → modèles → évaluation → déploiement.</p>
+            <p class="project-oneline">Plateforme Python modulaire de recherche ML sur séries temporelles exigeantes (données tick), couvrant le cycle complet ingestion → features → labels → modèles → évaluation → déploiement.</p>
             <ul>
-              <li>Traitement de plusieurs dizaines de millions d’observations tick et génération de datasets prêts pour la modélisation.</li>
-              <li>Pipelines reproductibles pilotés par Hydra / Dagster, avec suivi des paramètres, métriques et artefacts dans MLflow.</li>
+              <li>Traitement de plusieurs dizaines de millions d’observations et génération de datasets prêts pour la modélisation.</li>
+              <li>Pipelines reproductibles Hydra / Dagster, avec suivi des paramètres, métriques et artefacts dans MLflow.</li>
               <li>~950 tests automatisés et validation temporelle robuste : OOS, walk-forward, purging et contrôles de falsification.</li>
-              <li>Benchmark CPU/GPU (RF ≈ 40× vs 1 cœur, ≈ 2,8× vs CPU multi-thread ; XGBoost ≈ 2,9×) et démo live FastAPI / Streamlit / Joblib.</li>
+              <li>Accélération du fit modèles (RF jusqu’à ≈&nbsp;40× vs 1 cœur ; XGBoost ≈&nbsp;2,9×) et démo live FastAPI / Streamlit.</li>
             </ul>
           </article>
 
@@ -111,10 +111,10 @@
               <h3>Recherche ML — Régimes et prédictibilité des séries temporelles</h3>
               <span class="project-tag">HMM · XGBoost · event conditioning · validation OOS</span>
             </div>
-            <p class="project-oneline">Étude de la détection, de la persistance et de la prédictibilité de régimes de marché.</p>
+            <p class="project-oneline">Étude de la détection, de la persistance et de la prédictibilité de régimes dans des séries temporelles.</p>
             <ul>
               <li>Comparaison de modèles supervisés et HMM sous validation temporelle hors échantillon.</li>
-              <li>Signal global mesurable sur certains labels de régime (ROC-AUC ≈ 0,70–0,80), puis étude de sa dégradation après conditionnement sur différents événements.</li>
+              <li>Signal mesurable sur certains labels de régime (ROC-AUC ≈&nbsp;0,70–0,80), puis analyse de sa dégradation selon le contexte événementiel.</li>
               <li>Analyse des transitions d’états, de leur persistance et de la durée de vie de l’information.</li>
             </ul>
           </article>
@@ -129,10 +129,10 @@
 
           <article class="project project--compact">
             <div class="project-head">
-              <h3>Segmentation de marchés internationaux</h3>
+              <h3>Segmentation pays pour priorisation d’export</h3>
               <span class="project-tag">PCA · clustering</span>
             </div>
-            <p class="project-oneline">Analyse de 125 pays à partir de 10+ indicateurs économiques et commerciaux afin d’identifier des marchés d’export prioritaires. PCA puis clustering K-means/CAH ; 4 composantes ≈&nbsp;78&nbsp;% de variance expliquée.</p>
+            <p class="project-oneline">Analyse de 125 pays à partir de 10+ indicateurs économiques et commerciaux. PCA puis clustering K-means/CAH ; 4 composantes ≈&nbsp;78&nbsp;% de variance expliquée.</p>
           </article>
         </section>
       </div>
